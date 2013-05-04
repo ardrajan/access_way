@@ -24,6 +24,7 @@
 		D0A16ECE1735770800942478 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A16ECD1735770800942478 /* CoreLocation.framework */; };
 		D0A16ED5173578BF00942478 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A16ED4173578BF00942478 /* icon@2x.png */; };
 		D0A16ED7173578C500942478 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A16ED6173578C500942478 /* icon.png */; };
+		D0A16EDA1735A89300942478 /* StopData.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A16ED91735A89300942478 /* StopData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		D0A16ECD1735770800942478 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D0A16ED4173578BF00942478 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
 		D0A16ED6173578C500942478 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
+		D0A16ED81735A89300942478 /* StopData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopData.h; sourceTree = "<group>"; };
+		D0A16ED91735A89300942478 /* StopData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopData.m; sourceTree = "<group>"; };
 		D626AFF257D942A08142777E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +112,8 @@
 				D0A16EC0173571B400942478 /* MainStoryboard_iPad.storyboard */,
 				D0A16EC3173571B400942478 /* ViewController.h */,
 				D0A16EC4173571B400942478 /* ViewController.m */,
+				D0A16ED81735A89300942478 /* StopData.h */,
+				D0A16ED91735A89300942478 /* StopData.m */,
 				D0A16ECF1735789300942478 /* Images */,
 				D0A16EAC173571B400942478 /* Supporting Files */,
 			);
@@ -243,6 +248,7 @@
 				D0A16EB2173571B400942478 /* main.m in Sources */,
 				D0A16EB6173571B400942478 /* AppDelegate.m in Sources */,
 				D0A16EC5173571B400942478 /* ViewController.m in Sources */,
+				D0A16EDA1735A89300942478 /* StopData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
