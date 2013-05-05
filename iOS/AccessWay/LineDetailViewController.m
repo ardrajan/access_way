@@ -34,6 +34,12 @@
     [_tableView setDataSource:self];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -49,23 +55,35 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    [cell.textLabel setNumberOfLines:0];
-    [cell.textLabel setText:[self.route objectForKey:@"route_desc"]];
-    [cell.textLabel sizeToFit];
-    return cell;
+    if (indexPath.row == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+        [cell.textLabel setNumberOfLines:0];
+        [cell.textLabel setText:[self.route objectForKey:@"route_desc"]];
+        [cell.textLabel sizeToFit];
+        return cell;
+    } else {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AltCell"];
+        [cell.textLabel setText:@"Service Status"];
+        cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"disclosure_arrow"]];
+        return cell;
+    }
+    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *text = [self.route objectForKey:@"route_desc"];
-    CGSize size = [text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:15.0f] constrainedToSize:CGSizeMake(300, 1000)];
-    return size.height+30;
+    if (indexPath.row == 0) {
+        NSString *text = [self.route objectForKey:@"route_desc"];
+        CGSize size = [text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:15.0f] constrainedToSize:CGSizeMake(300, 1000)];
+        return size.height+30;
+    } else {
+        return 44;
+    }
 }
 
 #pragma mark - UITableView delegate

@@ -30,7 +30,7 @@
     [self getRoutesData];
     [self.textLabel setText:[[self.stop objectForKey:@"stop_name"] uppercaseString]];
     NSString *stopID = [[self.stop objectForKey:@"stop_id"] substringToIndex:3];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://4m6u.localtunnel.com/routes.json?stop_id=%@", stopID]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://4c5v.localtunnel.com/routes.json?stop_id=%@", stopID]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSString *routes = [[JSON objectAtIndex:0] objectForKey:@"name"];
@@ -50,7 +50,7 @@
 
 -(void)getRoutesData
 {
-    NSURL *url = [NSURL URLWithString:@"http://3twg.localtunnel.com/api/routes/nyct"];
+    NSURL *url = [NSURL URLWithString:@"http://57ay.localtunnel.com/api/routes/nyct"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         for (NSDictionary *route in JSON) {

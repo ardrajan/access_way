@@ -34,17 +34,21 @@
     }
     
     self.elevators = @[];
-    if (self.elevators.count == 0)
-        UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"There are no elevators at this stop.");
-    
     self.exits = @[@{@"type": @"Stairwell", @"direction": @"NE"}, @{@"type":@"Stairwell", @"direction":@"SE"}];
+    
+    if (self.elevators.count == 0)
+        [self performSelector:@selector(notPresent) withObject:nil afterDelay:1.0];
     
     self.locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
     [_locationManager startUpdatingLocation];
     [_locationManager startUpdatingHeading];
     [_locationManager setHeadingFilter:5.0f];
-    
+}
+
+- (void)notPresent
+{
+    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"There are no elevators at this stop.");
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,22 +64,34 @@
         CLLocationDirection theHeading = newHeading.magneticHeading;
         if (theHeading > 22.5 && theHeading < 67.5) {
             // north east
-            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"You are facing the North East stairwell");
-            // vibrate and flash
-            [self vibrateAndFlash];
-            [self.detailTextLabel setText:@"Facing North East Corner"];
+            // this is a hack
+            if ([self.title isEqualToString:@"Exits"]) {
+                UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"You are facing the North East stairwell");
+                // vibrate and flash
+                [self vibrateAndFlash];
+                [self.detailTextLabel setText:@"Stairwell"];
+            }
+            [self.directionLabel setText:@"NE"];
         } else if (theHeading > 112.5 && theHeading < 158.5) {
             // south east
-            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"You are facing the South East stairwell");
-            // vibrate and flash
-            [self vibrateAndFlash];
-            [self.detailTextLabel setText:@"Facing South East Corner"];
+            if ([self.title isEqualToString:@"Exits"]) {
+                UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"You are facing the South East stairwell");
+                // vibrate and flash
+                [self vibrateAndFlash];
+                [self.detailTextLabel setText:@"Stairwell"];
+            }
+            [self.directionLabel setText:@"SE"];
         } else if (theHeading > 182.5 && theHeading < 247.5) {
             // south west
-            [self.detailTextLabel setText:@"Facing South West Corner"];
-        } else {
+            [self.detailTextLabel setText:@""];
+            [self.directionLabel setText:@"SW"];
+        } else if (theHeading > 292.5 && theHeading < 337.5) {
             // north west
-            [self.detailTextLabel setText:@"Facing North West Corner"];
+            [self.detailTextLabel setText:@""];
+            [self.directionLabel setText:@"NW"];
+        } else {
+            [self.detailTextLabel setText:@""];
+            [self.directionLabel setText:@""];
         }
     }
 }
