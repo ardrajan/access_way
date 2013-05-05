@@ -23,10 +23,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationItem setBackBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil]];
+    
     self.routeData = [NSMutableDictionary dictionaryWithCapacity:0];
-    
     [self getRoutesData];
-    
     [self.textLabel setText:[[self.stop objectForKey:@"stop_name"] uppercaseString]];
     NSString *stopID = [[self.stop objectForKey:@"stop_id"] substringToIndex:3];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:3000/routes.json?stop_id=%@", stopID]];
@@ -39,6 +39,12 @@
         [self.tableView reloadData];
     } failure:nil];
     [operation start];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
 
 -(void)getRoutesData

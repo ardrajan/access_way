@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class CircleView;
 
 @interface RouteCell : UITableViewCell
 
 @property (strong, nonatomic) UIColor *color;
-@property (strong, nonatomic) CircleView *circleView;
+@property (strong, nonatomic) UIView *circleView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *routeLabel;
 

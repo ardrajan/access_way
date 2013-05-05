@@ -11,7 +11,6 @@
 		D03421D91736089300D5230E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D03421D81736089300D5230E /* icon@2x.png */; };
 		D03421DB1736089500D5230E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D03421DA1736089500D5230E /* icon.png */; };
 		D0627D541735FC4800184895 /* RouteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0627D531735FC4800184895 /* RouteCell.m */; };
-		D0627D571735FCDA00184895 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0627D561735FCDA00184895 /* CircleView.m */; };
 		D0627D5A173600B400184895 /* disclosure_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0627D58173600B400184895 /* disclosure_arrow@2x.png */; };
 		D0627D5B173600B400184895 /* disclosure_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D0627D59173600B400184895 /* disclosure_arrow.png */; };
 		D0627D5D1736052D00184895 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0627D5C1736052D00184895 /* HeaderView.xib */; };
@@ -53,8 +52,6 @@
 		D03421DA1736089500D5230E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		D0627D521735FC4800184895 /* RouteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteCell.h; sourceTree = "<group>"; };
 		D0627D531735FC4800184895 /* RouteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteCell.m; sourceTree = "<group>"; };
-		D0627D551735FCDA00184895 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
-		D0627D561735FCDA00184895 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		D0627D58173600B400184895 /* disclosure_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure_arrow@2x.png"; sourceTree = "<group>"; };
 		D0627D59173600B400184895 /* disclosure_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure_arrow.png; sourceTree = "<group>"; };
 		D0627D5C1736052D00184895 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -165,8 +162,6 @@
 				D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */,
 				D0627D521735FC4800184895 /* RouteCell.h */,
 				D0627D531735FC4800184895 /* RouteCell.m */,
-				D0627D551735FCDA00184895 /* CircleView.h */,
-				D0627D561735FCDA00184895 /* CircleView.m */,
 				D0627D5C1736052D00184895 /* HeaderView.xib */,
 				D0627D5E173605F000184895 /* HeaderView.h */,
 				D0627D5F173605F000184895 /* HeaderView.m */,
@@ -335,7 +330,6 @@
 				D0A16EC5173571B400942478 /* ViewController.m in Sources */,
 				D0B7FD1F1735CF400096DED6 /* DetailViewController.m in Sources */,
 				D0627D541735FC4800184895 /* RouteCell.m in Sources */,
-				D0627D571735FCDA00184895 /* CircleView.m in Sources */,
 				D0627D60173605F100184895 /* HeaderView.m in Sources */,
 				D0FD16481736912D00775130 /* InitialViewController.m in Sources */,
 				D0F7C9E51736A6DC00E30A0E /* LineDetailViewController.m in Sources */,

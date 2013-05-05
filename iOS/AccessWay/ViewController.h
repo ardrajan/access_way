@@ -10,6 +10,7 @@
 @class MKMapView;
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 - (IBAction)locateStop:(id)sender;
 - (IBAction)popViewController:(id)sender;
 

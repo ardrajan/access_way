@@ -29,7 +29,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD4-7P-e4A">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="QFo-Jb-2Md"/>
+                                    <constraint firstAttribute="height" constant="80" type="user" id="QFo-Jb-2Md"/>
                                     <constraint firstAttribute="width" constant="80" id="iRY-Sl-VGX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -46,7 +46,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pe-jD-Ayr">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="0Kd-cN-GM0"/>
+                                    <constraint firstAttribute="height" constant="80" type="user" id="0Kd-cN-GM0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="wheelchair_accessibility@2x.png">
@@ -76,7 +76,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TO-hP-pwG">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="Ieg-lP-RH6"/>
+                                    <constraint firstAttribute="height" constant="33" type="user" id="Ieg-lP-RH6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="I need wheelchair accessibility">
@@ -92,18 +92,21 @@
                         <constraints>
                             <constraint firstItem="3TO-hP-pwG" firstAttribute="leading" secondItem="P53-vd-tyk" secondAttribute="leading" type="default" id="0v8-Lq-amm"/>
                             <constraint firstItem="hD4-7P-e4A" firstAttribute="centerX" secondItem="GVS-6h-cUf" secondAttribute="centerX" type="default" id="2HC-tE-572"/>
+                            <constraint firstItem="P53-vd-tyk" firstAttribute="top" secondItem="3" secondAttribute="top" constant="264" type="user" id="2T4-Bj-oT3"/>
                             <constraint firstItem="7Pe-jD-Ayr" firstAttribute="leading" secondItem="hD4-7P-e4A" secondAttribute="leading" type="default" id="6Vp-pb-r1B"/>
                             <constraint firstItem="GVS-6h-cUf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="124" id="DVl-Xz-9Hs"/>
-                            <constraint firstItem="P53-vd-tyk" firstAttribute="centerX" secondItem="hD4-7P-e4A" secondAttribute="centerX" type="default" id="Dcu-7a-85F"/>
                             <constraint firstItem="GP8-Vo-F9l" firstAttribute="top" secondItem="3" secondAttribute="top" constant="40" id="Gw5-Jw-V86"/>
-                            <constraint firstItem="3TO-hP-pwG" firstAttribute="top" secondItem="7Pe-jD-Ayr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IEI-jy-lgZ"/>
-                            <constraint firstItem="3TO-hP-pwG" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="JkL-OV-IzB"/>
-                            <constraint firstAttribute="bottom" secondItem="3TO-hP-pwG" secondAttribute="bottom" constant="66" id="VBG-VG-VsV"/>
+                            <constraint firstItem="P53-vd-tyk" firstAttribute="centerX" secondItem="hD4-7P-e4A" secondAttribute="centerX" type="default" id="K0g-fK-xJ1"/>
+                            <constraint firstItem="3TO-hP-pwG" firstAttribute="top" secondItem="3" secondAttribute="top" constant="407" type="user" id="Ql2-1m-P2V"/>
+                            <constraint firstItem="3TO-hP-pwG" firstAttribute="top" secondItem="7Pe-jD-Ayr" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="VpC-mV-wOx"/>
                             <constraint firstItem="7Pe-jD-Ayr" firstAttribute="trailing" secondItem="hD4-7P-e4A" secondAttribute="trailing" type="default" id="X3v-5R-LSX"/>
                             <constraint firstItem="GVS-6h-cUf" firstAttribute="centerX" secondItem="GP8-Vo-F9l" secondAttribute="centerX" type="default" id="Z8m-7e-afV"/>
-                            <constraint firstItem="hD4-7P-e4A" firstAttribute="top" secondItem="3" secondAttribute="top" constant="196" id="b6C-uE-BcR"/>
-                            <constraint firstItem="P53-vd-tyk" firstAttribute="top" secondItem="hD4-7P-e4A" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="je3-6J-0el"/>
+                            <constraint firstItem="7Pe-jD-Ayr" firstAttribute="top" secondItem="3" secondAttribute="top" constant="319" type="user" id="c09-hK-Jyn"/>
+                            <constraint firstItem="hD4-7P-e4A" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="176" type="user" id="gJ9-Mx-ICt"/>
+                            <constraint firstItem="P53-vd-tyk" firstAttribute="top" secondItem="hD4-7P-e4A" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="jud-Mi-oFo"/>
+                            <constraint firstItem="hD4-7P-e4A" firstAttribute="top" secondItem="3" secondAttribute="top" constant="176" type="user" id="mHF-dL-rsB"/>
                             <constraint firstItem="3TO-hP-pwG" firstAttribute="trailing" secondItem="P53-vd-tyk" secondAttribute="trailing" type="default" id="ntD-Hr-xOt"/>
+                            <constraint firstItem="P53-vd-tyk" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="ztc-Ho-XCU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="Ezz-Z6-t3M"/>
@@ -323,22 +326,34 @@
                                         <constraint firstItem="dS5-Tg-UtM" firstAttribute="top" secondItem="lCe-gL-Yal" secondAttribute="top" constant="63" id="NRI-m8-QoV"/>
                                         <constraint firstItem="rzJ-Sv-uFH" firstAttribute="leading" secondItem="lCe-gL-Yal" secondAttribute="leading" type="default" id="RcN-bI-a5V"/>
                                         <constraint firstItem="4VK-0G-Qvq" firstAttribute="leading" secondItem="lCe-gL-Yal" secondAttribute="leading" type="default" id="RlJ-Z0-ugT"/>
+                                        <constraint firstItem="zyd-eB-GXq" firstAttribute="leading" secondItem="lCe-gL-Yal" secondAttribute="leading" constant="21" id="XKH-eh-pff"/>
                                         <constraint firstItem="FRy-Si-2Ot" firstAttribute="leading" secondItem="lCe-gL-Yal" secondAttribute="leading" constant="87" id="Yt7-sC-Q2e"/>
                                         <constraint firstItem="4VK-0G-Qvq" firstAttribute="trailing" secondItem="lCe-gL-Yal" secondAttribute="trailing" type="default" id="bcA-Tr-bMy"/>
                                         <constraint firstItem="zyd-eB-GXq" firstAttribute="top" secondItem="lCe-gL-Yal" secondAttribute="top" constant="58" id="iME-RC-YM5"/>
                                         <constraint firstItem="dS5-Tg-UtM" firstAttribute="trailing" secondItem="FRy-Si-2Ot" secondAttribute="trailing" type="default" id="lMp-fT-bcb"/>
                                         <constraint firstItem="FRy-Si-2Ot" firstAttribute="leading" secondItem="dS5-Tg-UtM" secondAttribute="leading" type="default" id="qbE-16-DOj"/>
                                         <constraint firstItem="4VK-0G-Qvq" firstAttribute="top" secondItem="lCe-gL-Yal" secondAttribute="top" type="default" id="y3J-5q-X32"/>
-                                        <constraint firstItem="zyd-eB-GXq" firstAttribute="leading" secondItem="lCe-gL-Yal" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yVh-9C-qlX"/>
                                     </constraints>
                                 </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="3aY-Un-3UU">
+                                    <rect key="frame" x="0.0" y="205" width="320" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ADACell" rowHeight="90" id="Vn4-hZ-8gX">
-                                        <rect key="frame" x="0.0" y="161" width="320" height="90"/>
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="OJ7-n2-TxJ" rowHeight="44" style="IBUITableViewCellStyleDefault" id="Vn4-hZ-8gX">
+                                        <rect key="frame" x="0.0" y="161" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Route Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJ7-n2-TxJ">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
@@ -356,6 +371,8 @@
                     <navigationItem key="navigationItem" title="AccessWay" id="PIG-JJ-HBv"/>
                     <connections>
                         <outlet property="lineLabel" destination="zyd-eB-GXq" id="sck-AM-RDQ"/>
+                        <outlet property="subLabel" destination="FRy-Si-2Ot" id="407-3m-rIx"/>
+                        <outlet property="tableHeaderView" destination="lCe-gL-Yal" id="0nj-Eq-lSG"/>
                         <outlet property="tableView" destination="Lga-sa-qMe" id="bUf-s0-vTR"/>
                         <outlet property="textLabel" destination="dS5-Tg-UtM" id="58d-IO-HLR"/>
                     </connections>
@@ -387,6 +404,10 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1iV-lu-paB"/>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHW-Fj-XWd">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Did you know?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPR-BY-EHL">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="5Ox-Rl-iT8"/>
@@ -441,19 +462,28 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1iV-lu-paB" firstAttribute="bottom" secondItem="cGR-QZ-JBE" secondAttribute="bottom" type="default" id="2iU-Mm-irm"/>
                             <constraint firstItem="uv3-y4-oVR" firstAttribute="leading" secondItem="yPR-BY-EHL" secondAttribute="leading" type="default" id="7YG-QR-q96"/>
+                            <constraint firstAttribute="bottom" secondItem="wEe-1F-qyx" secondAttribute="bottom" constant="10" id="8AD-oL-KvT"/>
                             <constraint firstItem="yPR-BY-EHL" firstAttribute="trailing" secondItem="wEe-1F-qyx" secondAttribute="trailing" type="default" id="9AB-F2-7JI"/>
-                            <constraint firstAttribute="bottom" secondItem="wEe-1F-qyx" secondAttribute="bottom" constant="24" id="C9S-NK-Yg6"/>
-                            <constraint firstItem="UqP-Y6-dUG" firstAttribute="top" secondItem="cGR-QZ-JBE" secondAttribute="top" constant="249" id="GFA-3A-WUe"/>
-                            <constraint firstAttribute="bottom" secondItem="yPR-BY-EHL" secondAttribute="bottom" constant="106" id="JFV-14-uzC"/>
-                            <constraint firstItem="yPR-BY-EHL" firstAttribute="centerX" secondItem="UqP-Y6-dUG" secondAttribute="centerX" type="default" id="VsW-TF-CmM"/>
+                            <constraint firstItem="cHW-Fj-XWd" firstAttribute="top" secondItem="cGR-QZ-JBE" secondAttribute="top" type="default" id="FQE-LA-vv1"/>
+                            <constraint firstItem="1iV-lu-paB" firstAttribute="trailing" secondItem="cGR-QZ-JBE" secondAttribute="trailing" type="default" id="JOB-eq-ulP"/>
+                            <constraint firstAttribute="bottom" secondItem="yPR-BY-EHL" secondAttribute="bottom" constant="92" id="PY5-Ny-Vi3"/>
+                            <constraint firstItem="UqP-Y6-dUG" firstAttribute="centerX" secondItem="yPR-BY-EHL" secondAttribute="centerX" type="default" id="XG0-Ru-vxj"/>
+                            <constraint firstItem="1iV-lu-paB" firstAttribute="top" secondItem="cGR-QZ-JBE" secondAttribute="top" type="default" id="cPv-tC-3Xb"/>
                             <constraint firstItem="wEe-1F-qyx" firstAttribute="leading" secondItem="yPR-BY-EHL" secondAttribute="leading" type="default" id="iQk-cF-mc0"/>
-                            <constraint firstItem="UqP-Y6-dUG" firstAttribute="centerX" secondItem="cGR-QZ-JBE" secondAttribute="centerX" type="default" id="nId-iQ-SNn"/>
+                            <constraint firstItem="1iV-lu-paB" firstAttribute="centerX" secondItem="wEe-1F-qyx" secondAttribute="centerX" type="default" id="k2m-8x-fob"/>
+                            <constraint firstItem="cHW-Fj-XWd" firstAttribute="trailing" secondItem="cGR-QZ-JBE" secondAttribute="trailing" type="default" id="miQ-Ux-1Da"/>
+                            <constraint firstItem="cHW-Fj-XWd" firstAttribute="leading" secondItem="cGR-QZ-JBE" secondAttribute="leading" type="default" id="mmS-2D-FZD"/>
+                            <constraint firstItem="cHW-Fj-XWd" firstAttribute="bottom" secondItem="cGR-QZ-JBE" secondAttribute="bottom" type="default" id="oGx-IH-uQ3"/>
+                            <constraint firstItem="1iV-lu-paB" firstAttribute="leading" secondItem="cGR-QZ-JBE" secondAttribute="leading" type="default" id="qHO-hD-3GY"/>
+                            <constraint firstItem="UqP-Y6-dUG" firstAttribute="centerY" secondItem="1iV-lu-paB" secondAttribute="centerY" type="default" id="tNE-L3-QKA"/>
                             <constraint firstItem="uv3-y4-oVR" firstAttribute="top" secondItem="cGR-QZ-JBE" secondAttribute="top" constant="10" id="wZm-gk-DJg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ggi-y9-uTr"/>
                     <connections>
+                        <outlet property="mapView" destination="1iV-lu-paB" id="Jex-0u-NUb"/>
                         <segue destination="S1m-aV-TZK" kind="modal" identifier="presentDetailView" id="bU9-Su-iiO"/>
                     </connections>
                 </viewController>
@@ -468,47 +498,6 @@
         <image name="visually_impaired@2x.png" width="204" height="204"/>
         <image name="wheelchair_accessibility@2x.png" width="204" height="204"/>
     </resources>
-    <classes>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="dismissModalView:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="InitialViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushVisuallyImpaired:"/>
-            </relationships>
-        </class>
-        <class className="LineDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LineDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="lineLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="RouteCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RouteCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="routeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="locateStop:"/>
-                <relationship kind="action" name="popViewController:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

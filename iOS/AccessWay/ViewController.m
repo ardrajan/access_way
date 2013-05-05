@@ -102,7 +102,7 @@
                 NSDictionary *stop = [self.transitStops objectAtIndex:i];
                 CLLocation *poiLoc = [[CLLocation alloc] initWithLatitude:[[stop objectForKey:@"stop_lat"] doubleValue] longitude:[[stop objectForKey:@"stop_lon"] doubleValue]];
                 CLLocationDistance currentDistance = [location distanceFromLocation:poiLoc];
-                if (currentDistance < 120.0) {
+                if (currentDistance < 20.0) {
                     closestStop = stop;
                     [self openStopDetailView:stop];
                     [_locationManager stopUpdatingLocation];

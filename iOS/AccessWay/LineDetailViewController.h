@@ -12,7 +12,9 @@
 
 @property (strong, nonatomic) NSDictionary *route;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *tableHeaderView;
 @property (weak, nonatomic) IBOutlet UILabel *lineLabel;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subLabel;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "RouteCell.h"
-#import "CircleView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation RouteCell
 @synthesize nameLabel, routeLabel;
@@ -15,14 +15,15 @@
 -(void)awakeFromNib
 {
     CGRect positionFrame = CGRectMake(8,16,28,28);
-    self.circleView = [[CircleView alloc] initWithFrame:positionFrame];
+    self.circleView = [[UIView alloc] initWithFrame:positionFrame];
+    [self.circleView.layer setCornerRadius:14];
     [self.contentView insertSubview:self.circleView atIndex:0];
 }
 
 -(void)setColor:(UIColor *)color
 {
     _color = color;
-    self.circleView.color = _color;
+    self.circleView.backgroundColor = color;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
