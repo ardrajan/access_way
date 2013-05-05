@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="width" constant="80" id="iRY-Sl-VGX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button" image="visually_impaired@2x.png">
+                                <state key="normal" title="I am visually impaired" image="visually_impaired@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="height" constant="80" type="user" id="0Kd-cN-GM0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button" image="wheelchair_accessibility@2x.png">
+                                <state key="normal" title="I need wheelchair accessibility" image="wheelchair_accessibility@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -402,18 +402,10 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Facing North West Corner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpt-9b-VCx">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Lam-XX-27L"/>
+                                    <constraint firstAttribute="width" constant="198" id="baP-YX-ssr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ADA Accessible" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qx-Ca-pYj">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="B9G-zg-NQb"/>
-                                    <constraint firstAttribute="width" constant="198" id="OaQ-V2-cOp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNJ-cX-uCh">
@@ -425,20 +417,18 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="4Qx-Ca-pYj" secondAttribute="bottom" constant="42" id="21p-Iu-2rh"/>
                             <constraint firstItem="ptK-tv-N85" firstAttribute="centerX" secondItem="CNJ-cX-uCh" secondAttribute="centerX" type="default" id="6XX-aU-dFz"/>
-                            <constraint firstItem="Bpt-9b-VCx" firstAttribute="centerX" secondItem="SXX-g5-ewh" secondAttribute="centerX" type="default" id="F1u-rb-5yl"/>
+                            <constraint firstItem="Bpt-9b-VCx" firstAttribute="centerX" secondItem="CNJ-cX-uCh" secondAttribute="centerX" type="default" id="JMC-dM-VyZ"/>
                             <constraint firstItem="CNJ-cX-uCh" firstAttribute="centerY" secondItem="SXX-g5-ewh" secondAttribute="centerY" type="default" id="OAi-2D-swt"/>
                             <constraint firstAttribute="bottom" secondItem="Bpt-9b-VCx" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Pit-Yv-VCq"/>
-                            <constraint firstItem="4Qx-Ca-pYj" firstAttribute="leading" secondItem="Bpt-9b-VCx" secondAttribute="leading" type="default" id="fxe-Lf-SNX"/>
                             <constraint firstItem="ptK-tv-N85" firstAttribute="top" secondItem="SXX-g5-ewh" secondAttribute="top" constant="10" id="g7U-P8-VLV"/>
-                            <constraint firstItem="4Qx-Ca-pYj" firstAttribute="trailing" secondItem="Bpt-9b-VCx" secondAttribute="trailing" type="default" id="vKs-vJ-Jhs"/>
-                            <constraint firstItem="CNJ-cX-uCh" firstAttribute="centerX" secondItem="4Qx-Ca-pYj" secondAttribute="centerX" type="default" id="x7B-Vh-bhi"/>
+                            <constraint firstItem="CNJ-cX-uCh" firstAttribute="centerX" secondItem="SXX-g5-ewh" secondAttribute="centerX" type="default" id="z9B-oi-JD3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Compass" id="9J0-F2-WS9"/>
                     <connections>
                         <outlet property="alertView" destination="CNJ-cX-uCh" id="swJ-D4-l1J"/>
+                        <outlet property="detailTextLabel" destination="Bpt-9b-VCx" id="KiA-0M-TzA"/>
                         <outlet property="textLabel" destination="ptK-tv-N85" id="iwB-nk-SO7"/>
                     </connections>
                 </viewController>
@@ -568,6 +558,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CompassViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="alertView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="detailTextLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
             </relationships>
         </class>

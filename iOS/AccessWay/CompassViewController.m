@@ -7,6 +7,7 @@
 //
 
 #import "CompassViewController.h"
+#import <AudioToolbox/AudioServices.h>
 #import <QuartzCore/QuartzCore.h>
 #import <CoreLocation/CoreLocation.h>
 
@@ -54,12 +55,34 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
 {
-    NSLog(@"heading");
     if (newHeading.headingAccuracy > 0)
     {
         CLLocationDirection theHeading = newHeading.magneticHeading;
-        NSLog(@"%f", theHeading);
+        if (theHeading > 22.5 && theHeading < 67.5) {
+            // north east
+            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"You are facing the North East stairwell");
+            // vibrate and flash
+            [self vibrateAndFlash];
+            [self.detailTextLabel setText:@"Facing North East Corner"];
+        } else if (theHeading > 112.5 && theHeading < 158.5) {
+            // south east
+            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"You are facing the South East stairwell");
+            // vibrate and flash
+            [self vibrateAndFlash];
+            [self.detailTextLabel setText:@"Facing South East Corner"];
+        } else if (theHeading > 182.5 && theHeading < 247.5) {
+            // south west
+            [self.detailTextLabel setText:@"Facing South West Corner"];
+        } else {
+            // north west
+            [self.detailTextLabel setText:@"Facing North West Corner"];
+        }
     }
+}
+
+-(void)vibrateAndFlash
+{
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 @end

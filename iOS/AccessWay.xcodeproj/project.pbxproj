@@ -32,6 +32,7 @@
 		D0B7FD1F1735CF400096DED6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B7FD1E1735CF400096DED6 /* DetailViewController.m */; };
 		D0F7C9E51736A6DC00E30A0E /* LineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */; };
 		D0F7C9E81736C40100E30A0E /* CompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C9E71736C40100E30A0E /* CompassViewController.m */; };
+		D0F7C9EA1736D18600E30A0E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F7C9E91736D18600E30A0E /* AudioToolbox.framework */; };
 		D0FD16361736849300775130 /* elevator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD16341736849300775130 /* elevator@2x.png */; };
 		D0FD16371736849300775130 /* exit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD16351736849300775130 /* exit@2x.png */; };
 		D0FD163A173684B700775130 /* elevator.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD1638173684B700775130 /* elevator.png */; };
@@ -83,6 +84,7 @@
 		D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDetailViewController.m; sourceTree = "<group>"; };
 		D0F7C9E61736C40000E30A0E /* CompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompassViewController.h; sourceTree = "<group>"; };
 		D0F7C9E71736C40100E30A0E /* CompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompassViewController.m; sourceTree = "<group>"; };
+		D0F7C9E91736D18600E30A0E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D0FD16341736849300775130 /* elevator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "elevator@2x.png"; sourceTree = "<group>"; };
 		D0FD16351736849300775130 /* exit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exit@2x.png"; sourceTree = "<group>"; };
 		D0FD1638173684B700775130 /* elevator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elevator.png; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F7C9EA1736D18600E30A0E /* AudioToolbox.framework in Frameworks */,
 				D0A16ECE1735770800942478 /* CoreLocation.framework in Frameworks */,
 				D0A16ECC1735752700942478 /* MapKit.framework in Frameworks */,
 				D0A16EA6173571B400942478 /* UIKit.framework in Frameworks */,
@@ -138,6 +141,7 @@
 		D0A16EA4173571B400942478 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0F7C9E91736D18600E30A0E /* AudioToolbox.framework */,
 				D0A16ECD1735770800942478 /* CoreLocation.framework */,
 				D0A16ECB1735752700942478 /* MapKit.framework */,
 				D0A16EA5173571B400942478 /* UIKit.framework */,

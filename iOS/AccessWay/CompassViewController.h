@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *alertView;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailTextLabel;
 
 @end
