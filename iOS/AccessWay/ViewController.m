@@ -28,7 +28,6 @@
     [super viewDidLoad];
     _isLocated = NO;
     [self startLocationUpdate];
-    [SVProgressHUD showWithStatus:@"Loading..." maskType:SVProgressHUDMaskTypeGradient];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +65,8 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         self.transitStops = JSON;
-    } failure:nil];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+    }];
     [operation start];
 }
 
