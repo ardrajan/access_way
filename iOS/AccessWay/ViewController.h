@@ -11,5 +11,6 @@
 
 @interface ViewController : UIViewController
 - (IBAction)locateStop:(id)sender;
+- (IBAction)popViewController:(id)sender;
 
 @end

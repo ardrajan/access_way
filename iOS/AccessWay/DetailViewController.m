@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "RouteCell.h"
 #import "HeaderView.h"
+#import "LineDetailViewController.h"
 
 @interface DetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -50,6 +51,17 @@
         }
     } failure:nil];
     [operation start];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"pushLineDetailView"]) {
+        NSIndexPath *index = [self.tableView indexPathForSelectedRow];
+        NSString *key = [self.routes objectAtIndex:index.row];
+        NSDictionary *route = [self.routeData objectForKey:key];
+        LineDetailViewController *vc = segue.destinationViewController;
+        [vc setRoute:route];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -120,6 +132,17 @@
 {
     return 30;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        [self performSegueWithIdentifier:@"pushLineDetailView" sender:self];
+    } else {
+        
+    }
+}
+
+#pragma mark - Color Helper
 
 - (UIColor *)colorFromHexString:(NSString *)hexString {
     unsigned rgbValue = 0;

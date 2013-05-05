@@ -71,8 +71,11 @@
 }
 
 - (IBAction)locateStop:(id)sender {
-    [SVProgressHUD showWithStatus:@"Loading..." maskType:SVProgressHUDMaskTypeGradient];
     [self startLocationUpdate];
+}
+
+- (IBAction)popViewController:(id)sender {
+    [[self navigationController] popViewControllerAnimated:YES];
 }
 
 -(void)openStopDetailView:(NSDictionary *)stop
@@ -103,7 +106,6 @@
                     closestStop = stop;
                     [self openStopDetailView:stop];
                     [_locationManager stopUpdatingLocation];
-                    [SVProgressHUD dismiss];
                     _isLocated = NO;
                     break;
                 } else {

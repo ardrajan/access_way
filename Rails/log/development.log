@@ -8990,3 +8990,362 @@ Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-05 09:28:3
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-05 09:28:38 -0400
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:10:01 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (2.9ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (18.0ms)
+Completed 200 OK in 29ms (Views: 21.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:11:19 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.3ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.3ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:22:38 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.3ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:27:46 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.4ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.6ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-05 10:30:58 -0400
+Processing by RoutesController#index as HTML
+  [1m[36mRoute Load (1.8ms)[0m  [1mSELECT "routes".* FROM "routes"[0m
+  Rendered routes/index.html.erb within layouts/application (188.5ms)
+Completed 200 OK in 281ms (Views: 278.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/routes.css?body=1" for 127.0.0.1 at 2013-05-05 10:30:58 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-05 10:30:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-05 10:30:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-05 10:30:58 -0400
+
+
+Started GET "/assets/routes.js?body=1" for 127.0.0.1 at 2013-05-05 10:30:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-05 10:30:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-05-05 10:30:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-05 10:30:58 -0400
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:32:59 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.2ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.3ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:35:37 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.3ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:35:40 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.2ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:35:43 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.3ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.2ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:37:42 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.3ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:37:48 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.3ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:38:11 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.3ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.4ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:38:28 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.2ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:38:32 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.3ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.3ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:38:55 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.2ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:39:00 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.4ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.7ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:45:34 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.2ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:45:45 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.3ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.2ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:55:30 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.2ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 10:59:42 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.2ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:00:21 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.2ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:01:47 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.3ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:02:01 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.3ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.6ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:02:20 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.4ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.7ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:02:25 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.2ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:07:33 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.2ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:13:12 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.3ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:13:29 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.2ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:15:21 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.2ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:16:40 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.2ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:17:57 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.3ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:18:33 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.4ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.5ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:18:57 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.3ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.2ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:20:55 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.2ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.2ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:22:44 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.2ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:23:26 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.2ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:23:55 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.3ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.2ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:24:22 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.3ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.4ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:25:03 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.3ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (1.4ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:25:45 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.2ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.2ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:27:49 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[36mRoute Load (0.2ms)[0m  [1mSELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'[0m
+  Rendered routes/index.json.jbuilder (0.9ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes.json?stop_id=R24" for 127.0.0.1 at 2013-05-05 11:28:08 -0400
+Processing by RoutesController#index as JSON
+  Parameters: {"stop_id"=>"R24"}
+  [1m[35mRoute Load (0.2ms)[0m  SELECT "routes".* FROM "routes" WHERE "routes"."stop_id" = 'R24'
+  Rendered routes/index.json.jbuilder (1.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
