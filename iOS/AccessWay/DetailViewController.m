@@ -92,8 +92,10 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell"];
         if (indexPath.row == 0) {
             [cell.textLabel setText:@"Elevators"];
+            [cell.imageView setImage:[UIImage imageNamed:@"elevator"]];
         } else {
             [cell.textLabel setText:@"Exits"];
+            [cell.imageView setImage:[UIImage imageNamed:@"exit"]];
         }
         cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"disclosure_arrow"]];
         return cell;

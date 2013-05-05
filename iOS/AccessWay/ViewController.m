@@ -66,12 +66,12 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         self.transitStops = JSON;
-        [SVProgressHUD dismiss];
     } failure:nil];
     [operation start];
 }
 
 - (IBAction)locateStop:(id)sender {
+    [SVProgressHUD showWithStatus:@"Loading..." maskType:SVProgressHUDMaskTypeGradient];
     [self startLocationUpdate];
 }
 
@@ -103,6 +103,7 @@
                     closestStop = stop;
                     [self openStopDetailView:stop];
                     [_locationManager stopUpdatingLocation];
+                    [SVProgressHUD dismiss];
                     _isLocated = NO;
                     break;
                 } else {

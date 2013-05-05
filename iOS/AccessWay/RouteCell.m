@@ -14,7 +14,7 @@
 
 -(void)awakeFromNib
 {
-    CGRect positionFrame = CGRectMake(15,15,30,30);
+    CGRect positionFrame = CGRectMake(8,16,28,28);
     self.circleView = [[CircleView alloc] initWithFrame:positionFrame];
     [self.contentView insertSubview:self.circleView atIndex:0];
 }
