@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		87AFCE8930BD42919A41844E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D626AFF257D942A08142777E /* libPods.a */; };
+		D03421D91736089300D5230E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D03421D81736089300D5230E /* icon@2x.png */; };
+		D03421DB1736089500D5230E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D03421DA1736089500D5230E /* icon.png */; };
+		D0627D541735FC4800184895 /* RouteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0627D531735FC4800184895 /* RouteCell.m */; };
+		D0627D571735FCDA00184895 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0627D561735FCDA00184895 /* CircleView.m */; };
+		D0627D5A173600B400184895 /* disclosure_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0627D58173600B400184895 /* disclosure_arrow@2x.png */; };
+		D0627D5B173600B400184895 /* disclosure_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D0627D59173600B400184895 /* disclosure_arrow.png */; };
+		D0627D5D1736052D00184895 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0627D5C1736052D00184895 /* HeaderView.xib */; };
+		D0627D60173605F100184895 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0627D5F173605F000184895 /* HeaderView.m */; };
 		D0A16EA6173571B400942478 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A16EA5173571B400942478 /* UIKit.framework */; };
 		D0A16EA8173571B400942478 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A16EA7173571B400942478 /* Foundation.framework */; };
 		D0A16EAA173571B400942478 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A16EA9173571B400942478 /* CoreGraphics.framework */; };
@@ -22,21 +30,30 @@
 		D0A16EC5173571B400942478 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A16EC4173571B400942478 /* ViewController.m */; };
 		D0A16ECC1735752700942478 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A16ECB1735752700942478 /* MapKit.framework */; };
 		D0A16ECE1735770800942478 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A16ECD1735770800942478 /* CoreLocation.framework */; };
-		D0A16ED5173578BF00942478 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A16ED4173578BF00942478 /* icon@2x.png */; };
-		D0A16ED7173578C500942478 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A16ED6173578C500942478 /* icon.png */; };
-		D0A16EDA1735A89300942478 /* StopData.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A16ED91735A89300942478 /* StopData.m */; };
+		D0B7FD1F1735CF400096DED6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B7FD1E1735CF400096DED6 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6EEDE5B3BE8249B88EB7B585 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		D0A16EA2173571B400942478 /* Navigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D03421D81736089300D5230E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
+		D03421DA1736089500D5230E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
+		D0627D521735FC4800184895 /* RouteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteCell.h; sourceTree = "<group>"; };
+		D0627D531735FC4800184895 /* RouteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteCell.m; sourceTree = "<group>"; };
+		D0627D551735FCDA00184895 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		D0627D561735FCDA00184895 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		D0627D58173600B400184895 /* disclosure_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure_arrow@2x.png"; sourceTree = "<group>"; };
+		D0627D59173600B400184895 /* disclosure_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure_arrow.png; sourceTree = "<group>"; };
+		D0627D5C1736052D00184895 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		D0627D5E173605F000184895 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		D0627D5F173605F000184895 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		D0A16EA2173571B400942478 /* AccessWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccessWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A16EA5173571B400942478 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0A16EA7173571B400942478 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0A16EA9173571B400942478 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D0A16EAD173571B400942478 /* Navigator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Navigator-Info.plist"; sourceTree = "<group>"; };
+		D0A16EAD173571B400942478 /* AccessWay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AccessWay-Info.plist"; sourceTree = "<group>"; };
 		D0A16EAF173571B400942478 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0A16EB1173571B400942478 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D0A16EB3173571B400942478 /* Navigator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Navigator-Prefix.pch"; sourceTree = "<group>"; };
+		D0A16EB3173571B400942478 /* AccessWay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccessWay-Prefix.pch"; sourceTree = "<group>"; };
 		D0A16EB4173571B400942478 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0A16EB5173571B400942478 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D0A16EB7173571B400942478 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -48,10 +65,8 @@
 		D0A16EC4173571B400942478 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D0A16ECB1735752700942478 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D0A16ECD1735770800942478 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		D0A16ED4173578BF00942478 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
-		D0A16ED6173578C500942478 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
-		D0A16ED81735A89300942478 /* StopData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopData.h; sourceTree = "<group>"; };
-		D0A16ED91735A89300942478 /* StopData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopData.m; sourceTree = "<group>"; };
+		D0B7FD1D1735CF400096DED6 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		D0B7FD1E1735CF400096DED6 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		D626AFF257D942A08142777E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,7 +90,7 @@
 		D0A16E99173571B400942478 = {
 			isa = PBXGroup;
 			children = (
-				D0A16EAB173571B400942478 /* Navigator */,
+				D0A16EAB173571B400942478 /* AccessWay */,
 				D0A16EA4173571B400942478 /* Frameworks */,
 				D0A16EA3173571B400942478 /* Products */,
 				6EEDE5B3BE8249B88EB7B585 /* Pods.xcconfig */,
@@ -85,7 +100,7 @@
 		D0A16EA3173571B400942478 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0A16EA2173571B400942478 /* Navigator.app */,
+				D0A16EA2173571B400942478 /* AccessWay.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,7 +118,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D0A16EAB173571B400942478 /* Navigator */ = {
+		D0A16EAB173571B400942478 /* AccessWay */ = {
 			isa = PBXGroup;
 			children = (
 				D0A16EB4173571B400942478 /* AppDelegate.h */,
@@ -112,21 +127,28 @@
 				D0A16EC0173571B400942478 /* MainStoryboard_iPad.storyboard */,
 				D0A16EC3173571B400942478 /* ViewController.h */,
 				D0A16EC4173571B400942478 /* ViewController.m */,
-				D0A16ED81735A89300942478 /* StopData.h */,
-				D0A16ED91735A89300942478 /* StopData.m */,
+				D0B7FD1D1735CF400096DED6 /* DetailViewController.h */,
+				D0B7FD1E1735CF400096DED6 /* DetailViewController.m */,
+				D0627D521735FC4800184895 /* RouteCell.h */,
+				D0627D531735FC4800184895 /* RouteCell.m */,
+				D0627D551735FCDA00184895 /* CircleView.h */,
+				D0627D561735FCDA00184895 /* CircleView.m */,
+				D0627D5C1736052D00184895 /* HeaderView.xib */,
+				D0627D5E173605F000184895 /* HeaderView.h */,
+				D0627D5F173605F000184895 /* HeaderView.m */,
 				D0A16ECF1735789300942478 /* Images */,
 				D0A16EAC173571B400942478 /* Supporting Files */,
 			);
-			path = Navigator;
+			path = AccessWay;
 			sourceTree = "<group>";
 		};
 		D0A16EAC173571B400942478 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D0A16EAD173571B400942478 /* Navigator-Info.plist */,
+				D0A16EAD173571B400942478 /* AccessWay-Info.plist */,
 				D0A16EAE173571B400942478 /* InfoPlist.strings */,
 				D0A16EB1173571B400942478 /* main.m */,
-				D0A16EB3173571B400942478 /* Navigator-Prefix.pch */,
+				D0A16EB3173571B400942478 /* AccessWay-Prefix.pch */,
 				D0A16EB7173571B400942478 /* Default.png */,
 				D0A16EB9173571B400942478 /* Default@2x.png */,
 				D0A16EBB173571B400942478 /* Default-568h@2x.png */,
@@ -137,8 +159,10 @@
 		D0A16ECF1735789300942478 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D0A16ED6173578C500942478 /* icon.png */,
-				D0A16ED4173578BF00942478 /* icon@2x.png */,
+				D03421DA1736089500D5230E /* icon.png */,
+				D03421D81736089300D5230E /* icon@2x.png */,
+				D0627D58173600B400184895 /* disclosure_arrow@2x.png */,
+				D0627D59173600B400184895 /* disclosure_arrow.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -146,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D0A16EA1173571B400942478 /* Navigator */ = {
+		D0A16EA1173571B400942478 /* AccessWay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0A16EC8173571B400942478 /* Build configuration list for PBXNativeTarget "Navigator" */;
+			buildConfigurationList = D0A16EC8173571B400942478 /* Build configuration list for PBXNativeTarget "AccessWay" */;
 			buildPhases = (
 				AC03FDCB10734A439CA16CF4 /* Check Pods Manifest.lock */,
 				D0A16E9E173571B400942478 /* Sources */,
@@ -160,9 +184,9 @@
 			);
 			dependencies = (
 			);
-			name = Navigator;
+			name = AccessWay;
 			productName = Navigator;
-			productReference = D0A16EA2173571B400942478 /* Navigator.app */;
+			productReference = D0A16EA2173571B400942478 /* AccessWay.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -174,7 +198,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Robin Chou";
 			};
-			buildConfigurationList = D0A16E9D173571B400942478 /* Build configuration list for PBXProject "Navigator" */;
+			buildConfigurationList = D0A16E9D173571B400942478 /* Build configuration list for PBXProject "AccessWay" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -186,7 +210,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0A16EA1173571B400942478 /* Navigator */,
+				D0A16EA1173571B400942478 /* AccessWay */,
 			);
 		};
 /* End PBXProject section */
@@ -202,8 +226,11 @@
 				D0A16EBC173571B400942478 /* Default-568h@2x.png in Resources */,
 				D0A16EBF173571B400942478 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D0A16EC2173571B400942478 /* MainStoryboard_iPad.storyboard in Resources */,
-				D0A16ED5173578BF00942478 /* icon@2x.png in Resources */,
-				D0A16ED7173578C500942478 /* icon.png in Resources */,
+				D0627D5A173600B400184895 /* disclosure_arrow@2x.png in Resources */,
+				D0627D5B173600B400184895 /* disclosure_arrow.png in Resources */,
+				D0627D5D1736052D00184895 /* HeaderView.xib in Resources */,
+				D03421D91736089300D5230E /* icon@2x.png in Resources */,
+				D03421DB1736089500D5230E /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +275,10 @@
 				D0A16EB2173571B400942478 /* main.m in Sources */,
 				D0A16EB6173571B400942478 /* AppDelegate.m in Sources */,
 				D0A16EC5173571B400942478 /* ViewController.m in Sources */,
-				D0A16EDA1735A89300942478 /* StopData.m in Sources */,
+				D0B7FD1F1735CF400096DED6 /* DetailViewController.m in Sources */,
+				D0627D541735FC4800184895 /* RouteCell.m in Sources */,
+				D0627D571735FCDA00184895 /* CircleView.m in Sources */,
+				D0627D60173605F100184895 /* HeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,10 +375,10 @@
 			baseConfigurationReference = 6EEDE5B3BE8249B88EB7B585 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Navigator/Navigator-Prefix.pch";
-				INFOPLIST_FILE = "Navigator/Navigator-Info.plist";
+				GCC_PREFIX_HEADER = "AccessWay/AccessWay-Prefix.pch";
+				INFOPLIST_FILE = "AccessWay/AccessWay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AccessWay;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -359,10 +389,10 @@
 			baseConfigurationReference = 6EEDE5B3BE8249B88EB7B585 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Navigator/Navigator-Prefix.pch";
-				INFOPLIST_FILE = "Navigator/Navigator-Info.plist";
+				GCC_PREFIX_HEADER = "AccessWay/AccessWay-Prefix.pch";
+				INFOPLIST_FILE = "AccessWay/AccessWay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AccessWay;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -371,7 +401,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D0A16E9D173571B400942478 /* Build configuration list for PBXProject "Navigator" */ = {
+		D0A16E9D173571B400942478 /* Build configuration list for PBXProject "AccessWay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0A16EC6173571B400942478 /* Debug */,
@@ -380,7 +410,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0A16EC8173571B400942478 /* Build configuration list for PBXNativeTarget "Navigator" */ = {
+		D0A16EC8173571B400942478 /* Build configuration list for PBXNativeTarget "AccessWay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0A16EC9173571B400942478 /* Debug */,
