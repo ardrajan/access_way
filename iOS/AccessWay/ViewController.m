@@ -11,7 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "DetailViewController.h"
 
-@interface ViewController () <CLLocationManagerDelegate>
+@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (strong, nonatomic) NSArray *transitStops;
 @property (strong, nonatomic) NSDictionary *userLocation;
@@ -21,13 +21,15 @@
 
 @end
 
-@implementation ViewController 
+@implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     _isLocated = NO;
     [self startLocationUpdate];
+    [self.mapView setDelegate:self];
+    [self.mapView setShowsUserLocation:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +49,22 @@
     }
 }
 
+-(void)centerOnUser
+{
+    MKCoordinateRegion region;
+    MKCoordinateSpan span;
+    span.latitudeDelta = 0.020;
+    span.longitudeDelta = 0.020;
+    
+    CLLocationCoordinate2D location;
+    location.latitude = [[self.userLocation objectForKey:@"lat"] doubleValue];
+    location.longitude = [[self.userLocation objectForKey:@"lng"] doubleValue];
+    region.span = span;
+    region.center = location;
+    
+    [self.mapView setRegion:region animated:YES];
+}
+
 #pragma mark - Custom Actions
 
 - (void)startLocationUpdate
@@ -61,7 +79,7 @@
 
 -(void)findNearbyWithLatitude:(NSString *)lat longitude:(NSString *)lng
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:8081/api/StopsNearby/%@/%@/0.25", lat, lng]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://3twg.localtunnel.com/api/StopsNearby/%@/%@/0.25", lat, lng]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         self.transitStops = JSON;
@@ -102,7 +120,7 @@
                 NSDictionary *stop = [self.transitStops objectAtIndex:i];
                 CLLocation *poiLoc = [[CLLocation alloc] initWithLatitude:[[stop objectForKey:@"stop_lat"] doubleValue] longitude:[[stop objectForKey:@"stop_lon"] doubleValue]];
                 CLLocationDistance currentDistance = [location distanceFromLocation:poiLoc];
-                if (currentDistance < 20.0) {
+                if (currentDistance < 120.0) {
                     closestStop = stop;
                     [self openStopDetailView:stop];
                     [_locationManager stopUpdatingLocation];
@@ -114,6 +132,11 @@
             }
         }
     }
+}
+
+- (void)mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation {
+    self.userLocation = @{@"lat":[NSNumber numberWithDouble:aUserLocation.coordinate.latitude], @"lng":[NSNumber numberWithDouble:aUserLocation.coordinate.longitude]};
+    [self centerOnUser];
 }
 
 @end

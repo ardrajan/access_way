@@ -31,6 +31,7 @@
 		D0A16ECE1735770800942478 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A16ECD1735770800942478 /* CoreLocation.framework */; };
 		D0B7FD1F1735CF400096DED6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B7FD1E1735CF400096DED6 /* DetailViewController.m */; };
 		D0F7C9E51736A6DC00E30A0E /* LineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */; };
+		D0F7C9E81736C40100E30A0E /* CompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C9E71736C40100E30A0E /* CompassViewController.m */; };
 		D0FD16361736849300775130 /* elevator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD16341736849300775130 /* elevator@2x.png */; };
 		D0FD16371736849300775130 /* exit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD16351736849300775130 /* exit@2x.png */; };
 		D0FD163A173684B700775130 /* elevator.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD1638173684B700775130 /* elevator.png */; };
@@ -80,6 +81,8 @@
 		D0B7FD1E1735CF400096DED6 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		D0F7C9E31736A6DC00E30A0E /* LineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDetailViewController.h; sourceTree = "<group>"; };
 		D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDetailViewController.m; sourceTree = "<group>"; };
+		D0F7C9E61736C40000E30A0E /* CompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompassViewController.h; sourceTree = "<group>"; };
+		D0F7C9E71736C40100E30A0E /* CompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompassViewController.m; sourceTree = "<group>"; };
 		D0FD16341736849300775130 /* elevator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "elevator@2x.png"; sourceTree = "<group>"; };
 		D0FD16351736849300775130 /* exit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exit@2x.png"; sourceTree = "<group>"; };
 		D0FD1638173684B700775130 /* elevator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elevator.png; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 				D0B7FD1E1735CF400096DED6 /* DetailViewController.m */,
 				D0F7C9E31736A6DC00E30A0E /* LineDetailViewController.h */,
 				D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */,
+				D0F7C9E61736C40000E30A0E /* CompassViewController.h */,
+				D0F7C9E71736C40100E30A0E /* CompassViewController.m */,
 				D0627D521735FC4800184895 /* RouteCell.h */,
 				D0627D531735FC4800184895 /* RouteCell.m */,
 				D0627D5C1736052D00184895 /* HeaderView.xib */,
@@ -333,6 +338,7 @@
 				D0627D60173605F100184895 /* HeaderView.m in Sources */,
 				D0FD16481736912D00775130 /* InitialViewController.m in Sources */,
 				D0F7C9E51736A6DC00E30A0E /* LineDetailViewController.m in Sources */,
+				D0F7C9E81736C40100E30A0E /* CompassViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

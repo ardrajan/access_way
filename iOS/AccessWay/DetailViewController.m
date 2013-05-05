@@ -10,6 +10,7 @@
 #import "RouteCell.h"
 #import "HeaderView.h"
 #import "LineDetailViewController.h"
+#import "CompassViewController.h"
 
 @interface DetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -29,7 +30,7 @@
     [self getRoutesData];
     [self.textLabel setText:[[self.stop objectForKey:@"stop_name"] uppercaseString]];
     NSString *stopID = [[self.stop objectForKey:@"stop_id"] substringToIndex:3];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:3000/routes.json?stop_id=%@", stopID]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://4m6u.localtunnel.com/routes.json?stop_id=%@", stopID]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSString *routes = [[JSON objectAtIndex:0] objectForKey:@"name"];
@@ -61,12 +62,19 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSIndexPath *index = [self.tableView indexPathForSelectedRow];
     if ([segue.identifier isEqualToString:@"pushLineDetailView"]) {
-        NSIndexPath *index = [self.tableView indexPathForSelectedRow];
         NSString *key = [self.routes objectAtIndex:index.row];
         NSDictionary *route = [self.routeData objectForKey:key];
         LineDetailViewController *vc = segue.destinationViewController;
         [vc setRoute:route];
+    } else {
+        CompassViewController *vc = segue.destinationViewController;
+        if (index.row == 0) {
+            [vc setTitle:@"Elevators"];
+        } else {
+            [vc setTitle:@"Exits"];
+        }
     }
 }
 
@@ -144,7 +152,7 @@
     if (indexPath.section == 0) {
         [self performSegueWithIdentifier:@"pushLineDetailView" sender:self];
     } else {
-        
+        [self performSegueWithIdentifier:@"pushCompassView" sender:self];
     }
 }
 
