@@ -1,16 +1,18 @@
-var async = require('async')
-  , mongoose = require('mongoose')
-  , _ = require('underscore')
-  , utils = require('./utils');
-
 //load config.js
 try {
   var config = require('../config.js');
 } catch (e) {
-  handleError(new Error('Cannot find config.js'));
+  console.log(e);
 }
 
-var db = mongoose.connect(config.mongo_url);
+var async = require('async')
+  , mongoose = require('mongoose')
+  , _ = require('underscore')
+  , utils = require('./utils')
+  , dbName = process.env['MONGO_NODE_DATABASE'] || config.mongo_node_database
+  , host = process.env['MONGO_NODE_HOST'] || config.mongo_node_host
+  , port = process.env['MONGO_NODE_PORT'] || config.mongo_node_port
+  , db = (port) ? mongoose.connect(host, dbName, port) : mongoose.connect(host, dbName);
 
 require('../models/Agency');
 require('../models/Calendar');
@@ -34,7 +36,7 @@ var Agency = db.model('Agency')
   , Calendar = db.model('Calendar');
 
 
-module.exports = {    
+module.exports = {
   agencies: function(cb){
     //gets a list of all agencies
 
@@ -47,10 +49,10 @@ module.exports = {
     Route.find({ agency_key: agency_key }, cb);
   },
 
-  
+
   getAgenciesByDistance: function(lat, lon, radius, cb){
     //gets all agencies within a radius
-    
+
     if (_.isFunction(radius)) {
       cb = radius;
       radius = 25; // default is 25 miles
@@ -60,7 +62,7 @@ module.exports = {
     lon = parseFloat(lon);
 
     var radiusInDegrees = Math.round(radius/69*100000)/100000;
-    
+
     Agency
       .where('agency_center')
       .near(lon, lat).maxDistance(radiusInDegrees)
@@ -83,7 +85,7 @@ module.exports = {
       , trip_ids = []
       , route_ids = []
       , routes = [];
-  
+
     async.series([
       getStopsNearby,
       getTrips,
@@ -92,7 +94,7 @@ module.exports = {
     ], function(e, results){
       cb(e, routes);
     });
-  
+
     function getStopsNearby(cb){
       Stop
         .where('loc')
@@ -110,7 +112,7 @@ module.exports = {
           }
         });
     }
-  
+
     function getTrips(cb){
       StopTime
         .distinct('trip_id')
@@ -120,7 +122,7 @@ module.exports = {
           cb(e, 'trips');
         });
     }
-  
+
     function getRoutes(cb){
       Trip
         .distinct('route_id')
@@ -134,7 +136,7 @@ module.exports = {
           }
         });
     }
-  
+
     function lookupRoutes(cb){
       Route
         .where('route_id').in(route_ids)
@@ -151,7 +153,7 @@ module.exports = {
 
   getStopsByRoute: function(agency_key, route_id, direction_id, cb){
     //gets stops for one route
-    
+
     if (_.isFunction(direction_id)) {
       cb = direction_id;
       direction_id = null;
@@ -162,7 +164,7 @@ module.exports = {
       , stops = []
       , trip_ids = []
       , stop_ids = [];
-  
+
     async.series([
       getTrips,
       getStopTimes,
@@ -199,7 +201,7 @@ module.exports = {
                     }
                     cb();
                   });
-            
+
               },
               function(e){
                 cb(null, 'trips')
@@ -207,7 +209,7 @@ module.exports = {
           } else {
             cb(new Error('Invalid agency_key or route_id'), 'trips');
           }
-        }); 
+        });
     }
 
     function getStopTimes(cb){
@@ -226,7 +228,7 @@ module.exports = {
                 cb();
               }
           );
-      
+
         }, function(e){
           cb(null, 'times');
         }
@@ -279,12 +281,12 @@ module.exports = {
 
   getTimesByStop: function(agency_key, route_id, stop_id, numOfTimes, direction_id, cb){
     //gets routes for one agency
-    
+
     if (_.isFunction(direction_id)) {
       cb = direction_id;
       direction_id = null; //default is ~ 1/4 mile
     }
-    
+
     var today = new Date()
 
       , service_ids = []
@@ -336,10 +338,10 @@ module.exports = {
     function findServices(cb){
       var query = { agency_key: agency_key }
         , todayFormatted = utils.formatDay(today);
-   
+
       //build query
       query[utils.getDayName(today).toLowerCase()] = 1;
-  
+
       Calendar
         .find(query)
         .where('start_date').lte( todayFormatted )
@@ -356,18 +358,18 @@ module.exports = {
         });
     }
 
-    function findTrips(cb){		
+    function findTrips(cb){
       var query = {
         agency_key: agency_key,
         route_id: route_id
       }
-      
+
       if ((direction_id === 0) || (direction_id === 1)) {
 		query.direction_id = direction_id;
 	  } else {
 		query["$or"] = [{direction_id:0},{direction_id:1}]
-	  }		
-      
+	  }
+
       Trip
         .find(query)
         .where('service_id').in(service_ids)
@@ -382,14 +384,14 @@ module.exports = {
           }
         });
     }
-    
+
     function findTimes(cb){
       var query = {
           agency_key: agency_key,
           stop_id: stop_id
         }
         , timeFormatted = utils.timeToSeconds(today);
-      
+
       StopTime
         .find(query)
         .where('trip_id').in(trip_ids)
@@ -418,7 +420,7 @@ module.exports = {
           route_id: route_id,
           direction_id: direction_id
         };
-          
+
         Trip
           .find(query)
           .limit(1)
@@ -439,7 +441,4 @@ module.exports = {
     }
 };
 
-function handleError(e) {
-  console.error(e || 'Unknown Error');
-  process.exit(1)
-};
+

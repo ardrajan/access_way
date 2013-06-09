@@ -50,7 +50,7 @@
 
 -(void)getRoutesData
 {
-    NSURL *url = [NSURL URLWithString:@"http://localhost:8081/api/routes/nyct"];
+    NSURL *url = [NSURL URLWithString:@"http://node-gtfs.herokuapp.com/api/routes/nyct"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         for (NSDictionary *route in JSON) {

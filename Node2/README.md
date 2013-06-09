@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/brendannee/node-gtfs.png)](http://travis-ci.org/brendannee/node-gtfs)
 #Node-GTFS
 
 node-GTFS loads transit data in [GTFS format](https://developers.google.com/transit/) from [GTFS Data Exchange](http://www.gtfs-data-exchange.com/), unzips it and stores it to a MongoDB database and provides some methods to query for agencies, routes, stops and times.  It also has spatial queries to find nearby stops, routes and agencies.
@@ -16,7 +17,7 @@ The mongodb URI is also configured in config.js
 
 ###To load data
 
-    node ./scripts/download
+    npm run-script download
 
 To keep schedules up to date, you might want to schedule this to occur once per day.
 
@@ -82,35 +83,6 @@ Returns the 100 nearest stops within the specified radius
     /api/times/san-francisco-municipal-transportation-agency/34/1256/0
 `:direction_id` is optional
 
-
-##Hosting the Example App with Heroku and MongoHQ
-
-A `Procfile` is already in the repo pointing to the example app in `examples/express`.
-
-Create app on Heroku
-
-    $ heroku apps:create YOURAPPNAME
-
-Add MongoHQ to your app
-
-    $ heroku addons:add mongohq:sandbox
-
-MONGOHQ creates a user, database and exports it as a MONGOHQ_URL environment variable.
-
-Push your app to Heroku
-
-    $ git push heroku master
-
-Execute the download script to populate the database with the agency data specified in config.js
-
-    $ run node ./scripts/download
-
-
-##Pulling in updated transit data
-
-Re-run the download script whenever you need to refresh the database.
-
-    $ npm run node ./scripts/download
 
 ## License
 
