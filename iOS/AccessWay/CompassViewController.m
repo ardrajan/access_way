@@ -36,7 +36,7 @@
     self.elevators = @[];
     self.exits = @[@{@"type": @"Stairwell", @"direction": @"NE"}, @{@"type":@"Stairwell", @"direction":@"SE"}];
     
-    if (self.elevators.count == 0)
+    if ([self.title isEqualToString:@"Elevators"] && self.elevators.count == 0)
         [self performSelector:@selector(notPresent) withObject:nil afterDelay:1.0];
     
     self.locationManager = [[CLLocationManager alloc] init];
