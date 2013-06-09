@@ -80,6 +80,7 @@
 -(void)findNearbyWithLatitude:(NSString *)lat longitude:(NSString *)lng
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://node-gtfs.herokuapp.com/api/StopsNearby/%@/%@/0.25", lat, lng]];
+    NSLog(@"%@", url);
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         self.transitStops = JSON;
