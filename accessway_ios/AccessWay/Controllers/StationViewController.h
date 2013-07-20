@@ -10,6 +10,9 @@
 
 @interface StationViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (nonatomic, strong) NSDictionary *stop;
+
 - (IBAction)closeButtonDidPress:(id)sender;
 
 @end

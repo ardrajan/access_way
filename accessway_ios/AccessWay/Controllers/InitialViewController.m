@@ -8,8 +8,11 @@
 
 #import "InitialViewController.h"
 #import "DLocationManager.h"
+#import "StationViewController.h"
 
 @interface InitialViewController ()
+
+@property (nonatomic, strong) NSArray *stopsNearby;
 
 @end
 
@@ -39,7 +42,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"presentStationViewController"]) {
-        
+        NSDictionary *stop = (id)sender;
+        UINavigationController *nc = segue.destinationViewController;
+        StationViewController *vc = (StationViewController *)nc.topViewController;
+        [vc setStop:stop];
     }
 }
 
@@ -48,10 +54,40 @@
 - (void)startUpdatingLocation
 {
     [[DLocationManager sharedManager] retrieveUserLocationSuccess:^(CLLocationManager *manager, NSArray *locations) {
-        [self performSegueWithIdentifier:@"presentStationViewController" sender:nil];
+        CLLocation *location = [locations lastObject];
+        [self findStopsNearbyWithLatitude:[NSString stringWithFormat:@"%0.7f", location.coordinate.latitude] longitude:[NSString stringWithFormat:@"%0.7f", location.coordinate.longitude]];
     } failure:^(CLLocationManager *manager, NSError *error) {
         [self setToConnectionUnsuccessful];
     }];
+}
+
+-(void)findStopsNearbyWithLatitude:(NSString *)lat longitude:(NSString *)lng
+{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://node-gtfs.herokuapp.com/api/StopsNearby/%@/%@/0.25", lat, lng]];
+    DLog(@"%@", url);
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id responseData) {
+        self.stopsNearby = responseData;
+        [self openNearestStop];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        [self setToConnectionUnsuccessful];
+    }];
+    [operation start];
+}
+
+- (void)openNearestStop
+{
+    for (NSDictionary *stop in self.stopsNearby) {
+        CLLocation *poiLoc = [[CLLocation alloc] initWithLatitude:[[stop objectForKey:@"stop_lat"] doubleValue] longitude:[[stop objectForKey:@"stop_lon"] doubleValue]];
+        CLLocationDistance currentDistance = [[DLocationManager sharedManager].location distanceFromLocation:poiLoc];
+        DLog(@"%f", currentDistance);
+        if (currentDistance < 500.0) {
+            [self performSegueWithIdentifier:@"presentStationViewController" sender:stop];
+            return;
+        }
+    }
+    
+    [self setToConnectionUnsuccessful];
 }
 
 #pragma mark - IB Actions

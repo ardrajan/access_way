@@ -15,6 +15,9 @@
 		D0627D5B173600B400184895 /* disclosure_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D0627D59173600B400184895 /* disclosure_arrow.png */; };
 		D0627D5D1736052D00184895 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0627D5C1736052D00184895 /* HeaderView.xib */; };
 		D0627D60173605F100184895 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0627D5F173605F000184895 /* HeaderView.m */; };
+		D0825796179B3F7600D2A55A /* NSDictionary+Stop.m in Sources */ = {isa = PBXBuildFile; fileRef = D0825795179B3F7600D2A55A /* NSDictionary+Stop.m */; };
+		D0825799179B461700D2A55A /* NSDictionary+Route.m in Sources */ = {isa = PBXBuildFile; fileRef = D0825798179B461600D2A55A /* NSDictionary+Route.m */; };
+		D082579C179B4CE500D2A55A /* RoutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D082579B179B4CE500D2A55A /* RoutesViewController.m */; };
 		D08ED737179A138A00CF6B9C /* DLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D08ED736179A138A00CF6B9C /* DLocationManager.m */; };
 		D08ED73B179A209B00CF6B9C /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08ED73A179A209B00CF6B9C /* InitialViewController.m */; };
 		D08ED73E179A221700CF6B9C /* StationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08ED73D179A221700CF6B9C /* StationViewController.m */; };
@@ -60,6 +63,12 @@
 		D0627D5C1736052D00184895 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		D0627D5E173605F000184895 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		D0627D5F173605F000184895 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		D0825794179B3F7600D2A55A /* NSDictionary+Stop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Stop.h"; sourceTree = "<group>"; };
+		D0825795179B3F7600D2A55A /* NSDictionary+Stop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Stop.m"; sourceTree = "<group>"; };
+		D0825797179B461600D2A55A /* NSDictionary+Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Route.h"; sourceTree = "<group>"; };
+		D0825798179B461600D2A55A /* NSDictionary+Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Route.m"; sourceTree = "<group>"; };
+		D082579A179B4CE500D2A55A /* RoutesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesViewController.h; sourceTree = "<group>"; };
+		D082579B179B4CE500D2A55A /* RoutesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesViewController.m; sourceTree = "<group>"; };
 		D08ED735179A138A00CF6B9C /* DLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLocationManager.h; sourceTree = "<group>"; };
 		D08ED736179A138A00CF6B9C /* DLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLocationManager.m; sourceTree = "<group>"; };
 		D08ED739179A209B00CF6B9C /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
@@ -124,6 +133,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0825793179B3D6C00D2A55A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D08ED731179A12BF00CF6B9C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,15 +157,10 @@
 				D08ED73A179A209B00CF6B9C /* InitialViewController.m */,
 				D08ED73C179A221700CF6B9C /* StationViewController.h */,
 				D08ED73D179A221700CF6B9C /* StationViewController.m */,
+				D082579A179B4CE500D2A55A /* RoutesViewController.h */,
+				D082579B179B4CE500D2A55A /* RoutesViewController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		D08ED733179A12BF00CF6B9C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		D08ED734179A12BF00CF6B9C /* Views */ = {
@@ -162,6 +173,10 @@
 		D08ED738179A166C00CF6B9C /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				D0825794179B3F7600D2A55A /* NSDictionary+Stop.h */,
+				D0825795179B3F7600D2A55A /* NSDictionary+Stop.m */,
+				D0825797179B461600D2A55A /* NSDictionary+Route.h */,
+				D0825798179B461600D2A55A /* NSDictionary+Route.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -204,7 +219,7 @@
 				D0A16EB4173571B400942478 /* AppDelegate.h */,
 				D0A16EB5173571B400942478 /* AppDelegate.m */,
 				D0A16EBD173571B400942478 /* MainStoryboard_iPhone.storyboard */,
-				D08ED733179A12BF00CF6B9C /* Models */,
+				D0825793179B3D6C00D2A55A /* Models */,
 				D08ED734179A12BF00CF6B9C /* Views */,
 				D08ED732179A12BF00CF6B9C /* Controllers */,
 				D08ED731179A12BF00CF6B9C /* Classes */,
@@ -391,6 +406,9 @@
 				D08ED737179A138A00CF6B9C /* DLocationManager.m in Sources */,
 				D08ED73B179A209B00CF6B9C /* InitialViewController.m in Sources */,
 				D08ED73E179A221700CF6B9C /* StationViewController.m in Sources */,
+				D0825796179B3F7600D2A55A /* NSDictionary+Stop.m in Sources */,
+				D0825799179B461700D2A55A /* NSDictionary+Route.m in Sources */,
+				D082579C179B4CE500D2A55A /* RoutesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
