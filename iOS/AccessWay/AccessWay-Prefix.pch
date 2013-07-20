@@ -11,8 +11,9 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-    #import <SVProgressHUD.h>
     #import <SystemConfiguration/SystemConfiguration.h>
     #import <MobileCoreServices/MobileCoreServices.h>
     #import <AFNetworking/AFNetworking.h>
+    #import <SVProgressHUD.h>
+    #import <FlatUIKit.h>
 #endif
