@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking 3
 #define COCOAPODS_VERSION_PATCH_AFNetworking 1
 
+// AHEasing
+#define COCOAPODS_POD_AVAILABLE_AHEasing
+#define COCOAPODS_VERSION_MAJOR_AHEasing 1
+#define COCOAPODS_VERSION_MINOR_AHEasing 1
+#define COCOAPODS_VERSION_PATCH_AHEasing 0
+
 // FlatUIKit
 #define COCOAPODS_POD_AVAILABLE_FlatUIKit
 #define COCOAPODS_VERSION_MAJOR_FlatUIKit 1
@@ -23,4 +29,10 @@
 #define COCOAPODS_VERSION_MAJOR_SVProgressHUD 0
 #define COCOAPODS_VERSION_MINOR_SVProgressHUD 9
 #define COCOAPODS_VERSION_PATCH_SVProgressHUD 0
+
+// UIView+EasingFunctions
+#define COCOAPODS_POD_AVAILABLE_UIView_EasingFunctions
+#define COCOAPODS_VERSION_MAJOR_UIView_EasingFunctions 0
+#define COCOAPODS_VERSION_MINOR_UIView_EasingFunctions 0
+#define COCOAPODS_VERSION_PATCH_UIView_EasingFunctions 1
 

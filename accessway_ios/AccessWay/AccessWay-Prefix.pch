@@ -16,4 +16,6 @@
     #import <AFNetworking/AFNetworking.h>
     #import <SVProgressHUD.h>
     #import <FlatUIKit.h>
+    #import <AHEasing/easing.h>
+    #import <UIView+EasingFunctions.h>
 #endif

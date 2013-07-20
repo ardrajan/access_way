@@ -1,16 +1,22 @@
 PODS:
   - AFNetworking (1.3.1)
+  - AHEasing (1.1)
   - FlatUIKit (1.2)
   - SVProgressHUD (0.9)
+  - UIView+EasingFunctions (0.0.1)
 
 DEPENDENCIES:
   - AFNetworking
+  - AHEasing
   - FlatUIKit
   - SVProgressHUD
+  - UIView+EasingFunctions
 
 SPEC CHECKSUMS:
   AFNetworking: 9ec8aafb9269236a7630bd8d9838ce2ba30fa2a0
+  AHEasing: b9a02ca67d0d663e2a8b83fd24fa8c2ecc5ddf9b
   FlatUIKit: 43b2acaa6f4ef57539b51b00e4ce62d506e33e11
   SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8
+  UIView+EasingFunctions: b27927be096f11b2d9551cefd63c08683bbd2a9f
 
 COCOAPODS: 0.22.2
