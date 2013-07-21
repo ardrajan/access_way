@@ -93,6 +93,15 @@ A different license may apply to other ressources included in this package,
 including Joseph Wain's Glyphish Icons. Please consult their 
 respective headers for the terms of their individual licenses.
 
+## TestFlightSDK
+
+All text and design is copyright © 2010-2013 TestFlight App, Inc.
+
+All rights reserved.
+
+https://testflightapp.com/tos/
+
+
 ## UIView+EasingFunctions
 
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE

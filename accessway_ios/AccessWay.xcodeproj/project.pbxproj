@@ -273,6 +273,7 @@
 				D0A16E9F173571B400942478 /* Frameworks */,
 				D0A16EA0173571B400942478 /* Resources */,
 				A923B03F448E4D7098C54E8D /* Copy Pods Resources */,
+				D0D85810179B8C48007E8AC5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -368,6 +369,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		D0D85810179B8C48007E8AC5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION == Release ]; then\n    buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\n    dec=$((0x$buildNumber))\n    buildNumber=$(($dec + 1))\n    hex=$(printf \"%X\" $buildNumber)\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $hex\" \"$INFOPLIST_FILE\"\nelse\n    echo $CONFIGURATION \" build - Not bumping build number.\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

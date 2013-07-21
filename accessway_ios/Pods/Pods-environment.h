@@ -30,6 +30,12 @@
 #define COCOAPODS_VERSION_MINOR_SVProgressHUD 9
 #define COCOAPODS_VERSION_PATCH_SVProgressHUD 0
 
+// TestFlightSDK
+#define COCOAPODS_POD_AVAILABLE_TestFlightSDK
+#define COCOAPODS_VERSION_MAJOR_TestFlightSDK 1
+#define COCOAPODS_VERSION_MINOR_TestFlightSDK 3
+#define COCOAPODS_VERSION_PATCH_TestFlightSDK 0
+
 // UIView+EasingFunctions
 #define COCOAPODS_POD_AVAILABLE_UIView_EasingFunctions
 #define COCOAPODS_VERSION_MAJOR_UIView_EasingFunctions 0

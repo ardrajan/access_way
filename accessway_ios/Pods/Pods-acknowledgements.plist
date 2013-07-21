@@ -122,6 +122,19 @@ respective headers for the terms of their individual licenses.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>All text and design is copyright © 2010-2013 TestFlight App, Inc.
+
+All rights reserved.
+
+https://testflightapp.com/tos/
+</string>
+			<key>Title</key>
+			<string>TestFlightSDK</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                     Version 2, December 2004
 
