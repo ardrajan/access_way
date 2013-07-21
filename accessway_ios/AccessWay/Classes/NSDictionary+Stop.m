@@ -25,4 +25,14 @@
     return [self objectForKey:@"agency_key"];
 }
 
+- (NSNumber *)stopLat
+{
+    return [self objectForKey:@"stop_lat"];
+}
+
+- (NSNumber *)stopLon
+{
+    return [self objectForKey:@"stop_lon"];
+}
+
 @end

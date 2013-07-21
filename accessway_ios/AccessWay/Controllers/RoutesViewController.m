@@ -9,8 +9,9 @@
 #import "RoutesViewController.h"
 #import "NSDictionary+Route.h"
 #import "RouteCell.h"
+#import "RouteTimesViewController.h"
 
-@interface RoutesViewController ()
+@interface RoutesViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -20,13 +21,34 @@
 {
     [super viewDidLoad];
     
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [self.navigationItem setBackBarButtonItem:backButton];
+    
 	// Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"pushRouteTimesViewController"]) {
+        RouteTimesViewController *vc = segue.destinationViewController;
+        NSIndexPath *index = [self.tableView indexPathForSelectedRow];
+        NSDictionary *route = [self.routes objectAtIndex:index.row];
+        [vc setRoute:route];
+        [vc setStop:self.stop];
+    }
 }
 
 #pragma mark - Table View Data Source
@@ -53,6 +75,11 @@
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.routeInfoType == RouteInfoTypeTimes) {
+        [self performSegueWithIdentifier:@"pushRouteTimesViewController" sender:nil];
+    }
+}
 
 @end

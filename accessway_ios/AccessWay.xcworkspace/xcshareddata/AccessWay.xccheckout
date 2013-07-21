@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F888BED9-1808-44F7-806D-87C5B1359653</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AccessWay</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DD166414-4087-40B8-BE6E-78664EE5DFAA</key>
+		<string>ssh://github.com/chourobin/access_way.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>accessway_ios/AccessWay.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DD166414-4087-40B8-BE6E-78664EE5DFAA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/chourobin/access_way.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DD166414-4087-40B8-BE6E-78664EE5DFAA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DD166414-4087-40B8-BE6E-78664EE5DFAA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AccessWay</string>
+		</dict>
+	</array>
+</dict>
+</plist>

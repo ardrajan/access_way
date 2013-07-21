@@ -10,6 +10,7 @@
 
 @interface StationViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 @property (nonatomic, strong) NSDictionary *stop;
 

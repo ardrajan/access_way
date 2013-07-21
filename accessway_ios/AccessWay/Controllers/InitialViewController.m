@@ -7,6 +7,7 @@
 //
 
 #import "InitialViewController.h"
+#import "NSDictionary+Stop.h"
 #import "DLocationManager.h"
 #import "StationViewController.h"
 
@@ -78,10 +79,10 @@
 - (void)openNearestStop
 {
     for (NSDictionary *stop in self.stopsNearby) {
-        CLLocation *poiLoc = [[CLLocation alloc] initWithLatitude:[[stop objectForKey:@"stop_lat"] doubleValue] longitude:[[stop objectForKey:@"stop_lon"] doubleValue]];
+        CLLocation *poiLoc = [[CLLocation alloc] initWithLatitude:[[stop stopLat] doubleValue] longitude:[[stop stopLon] doubleValue]];
         CLLocationDistance currentDistance = [[DLocationManager sharedManager].location distanceFromLocation:poiLoc];
 
-        if (currentDistance < 500) {
+        if (currentDistance < 500 && [stop stopId].length == 4) {
             [self performSegueWithIdentifier:@"presentStationViewController" sender:stop];
             return;
         }

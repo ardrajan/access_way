@@ -16,4 +16,8 @@
 
 - (NSString *)agencyKey;
 
+- (NSNumber *)stopLat;
+
+- (NSNumber *)stopLon;
+
 @end

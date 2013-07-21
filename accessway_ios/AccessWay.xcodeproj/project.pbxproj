@@ -12,10 +12,9 @@
 		D03421DB1736089500D5230E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D03421DA1736089500D5230E /* icon.png */; };
 		D04DC788179B6F950009DA91 /* RouteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D04DC787179B6F950009DA91 /* RouteCell.m */; };
 		D04DC78B179B70E10009DA91 /* UIColor+AWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D04DC78A179B70E10009DA91 /* UIColor+AWAdditions.m */; };
+		D04DC78E179B7F600009DA91 /* RouteTimesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04DC78D179B7F600009DA91 /* RouteTimesViewController.m */; };
 		D0627D5A173600B400184895 /* disclosure_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0627D58173600B400184895 /* disclosure_arrow@2x.png */; };
 		D0627D5B173600B400184895 /* disclosure_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D0627D59173600B400184895 /* disclosure_arrow.png */; };
-		D0627D5D1736052D00184895 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0627D5C1736052D00184895 /* HeaderView.xib */; };
-		D0627D60173605F100184895 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0627D5F173605F000184895 /* HeaderView.m */; };
 		D0825796179B3F7600D2A55A /* NSDictionary+Stop.m in Sources */ = {isa = PBXBuildFile; fileRef = D0825795179B3F7600D2A55A /* NSDictionary+Stop.m */; };
 		D0825799179B461700D2A55A /* NSDictionary+Route.m in Sources */ = {isa = PBXBuildFile; fileRef = D0825798179B461600D2A55A /* NSDictionary+Route.m */; };
 		D082579C179B4CE500D2A55A /* RoutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D082579B179B4CE500D2A55A /* RoutesViewController.m */; };
@@ -32,11 +31,8 @@
 		D0A16EBA173571B400942478 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A16EB9173571B400942478 /* Default@2x.png */; };
 		D0A16EBC173571B400942478 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A16EBB173571B400942478 /* Default-568h@2x.png */; };
 		D0A16EBF173571B400942478 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A16EBD173571B400942478 /* MainStoryboard_iPhone.storyboard */; };
-		D0A16EC5173571B400942478 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A16EC4173571B400942478 /* ViewController.m */; };
 		D0A16ECC1735752700942478 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A16ECB1735752700942478 /* MapKit.framework */; };
 		D0A16ECE1735770800942478 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A16ECD1735770800942478 /* CoreLocation.framework */; };
-		D0B7FD1F1735CF400096DED6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B7FD1E1735CF400096DED6 /* DetailViewController.m */; };
-		D0F7C9E51736A6DC00E30A0E /* LineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */; };
 		D0F7C9EA1736D18600E30A0E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F7C9E91736D18600E30A0E /* AudioToolbox.framework */; };
 		D0FD16361736849300775130 /* elevator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD16341736849300775130 /* elevator@2x.png */; };
 		D0FD16371736849300775130 /* exit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD16351736849300775130 /* exit@2x.png */; };
@@ -60,11 +56,10 @@
 		D04DC787179B6F950009DA91 /* RouteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteCell.m; sourceTree = "<group>"; };
 		D04DC789179B70E10009DA91 /* UIColor+AWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AWAdditions.h"; sourceTree = "<group>"; };
 		D04DC78A179B70E10009DA91 /* UIColor+AWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AWAdditions.m"; sourceTree = "<group>"; };
+		D04DC78C179B7F600009DA91 /* RouteTimesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteTimesViewController.h; sourceTree = "<group>"; };
+		D04DC78D179B7F600009DA91 /* RouteTimesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteTimesViewController.m; sourceTree = "<group>"; };
 		D0627D58173600B400184895 /* disclosure_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure_arrow@2x.png"; sourceTree = "<group>"; };
 		D0627D59173600B400184895 /* disclosure_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure_arrow.png; sourceTree = "<group>"; };
-		D0627D5C1736052D00184895 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
-		D0627D5E173605F000184895 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
-		D0627D5F173605F000184895 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		D0825794179B3F7600D2A55A /* NSDictionary+Stop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Stop.h"; sourceTree = "<group>"; };
 		D0825795179B3F7600D2A55A /* NSDictionary+Stop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Stop.m"; sourceTree = "<group>"; };
 		D0825797179B461600D2A55A /* NSDictionary+Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Route.h"; sourceTree = "<group>"; };
@@ -91,14 +86,8 @@
 		D0A16EB9173571B400942478 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D0A16EBB173571B400942478 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D0A16EBE173571B400942478 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		D0A16EC3173571B400942478 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D0A16EC4173571B400942478 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D0A16ECB1735752700942478 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D0A16ECD1735770800942478 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		D0B7FD1D1735CF400096DED6 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		D0B7FD1E1735CF400096DED6 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		D0F7C9E31736A6DC00E30A0E /* LineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDetailViewController.h; sourceTree = "<group>"; };
-		D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDetailViewController.m; sourceTree = "<group>"; };
 		D0F7C9E91736D18600E30A0E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D0FD16341736849300775130 /* elevator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "elevator@2x.png"; sourceTree = "<group>"; };
 		D0FD16351736849300775130 /* exit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exit@2x.png"; sourceTree = "<group>"; };
@@ -159,6 +148,8 @@
 				D08ED73D179A221700CF6B9C /* StationViewController.m */,
 				D082579A179B4CE500D2A55A /* RoutesViewController.h */,
 				D082579B179B4CE500D2A55A /* RoutesViewController.m */,
+				D04DC78C179B7F600009DA91 /* RouteTimesViewController.h */,
+				D04DC78D179B7F600009DA91 /* RouteTimesViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,15 +218,6 @@
 				D08ED734179A12BF00CF6B9C /* Views */,
 				D08ED732179A12BF00CF6B9C /* Controllers */,
 				D08ED731179A12BF00CF6B9C /* Classes */,
-				D0A16EC3173571B400942478 /* ViewController.h */,
-				D0A16EC4173571B400942478 /* ViewController.m */,
-				D0B7FD1D1735CF400096DED6 /* DetailViewController.h */,
-				D0B7FD1E1735CF400096DED6 /* DetailViewController.m */,
-				D0F7C9E31736A6DC00E30A0E /* LineDetailViewController.h */,
-				D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */,
-				D0627D5C1736052D00184895 /* HeaderView.xib */,
-				D0627D5E173605F000184895 /* HeaderView.h */,
-				D0627D5F173605F000184895 /* HeaderView.m */,
 				D0A16ECF1735789300942478 /* Images */,
 				D0A16EAC173571B400942478 /* Supporting Files */,
 			);
@@ -339,7 +321,6 @@
 				D0A16EBF173571B400942478 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D0627D5A173600B400184895 /* disclosure_arrow@2x.png in Resources */,
 				D0627D5B173600B400184895 /* disclosure_arrow.png in Resources */,
-				D0627D5D1736052D00184895 /* HeaderView.xib in Resources */,
 				D03421D91736089300D5230E /* icon@2x.png in Resources */,
 				D03421DB1736089500D5230E /* icon.png in Resources */,
 				D0FD16361736849300775130 /* elevator@2x.png in Resources */,
@@ -397,10 +378,6 @@
 			files = (
 				D0A16EB2173571B400942478 /* main.m in Sources */,
 				D0A16EB6173571B400942478 /* AppDelegate.m in Sources */,
-				D0A16EC5173571B400942478 /* ViewController.m in Sources */,
-				D0B7FD1F1735CF400096DED6 /* DetailViewController.m in Sources */,
-				D0627D60173605F100184895 /* HeaderView.m in Sources */,
-				D0F7C9E51736A6DC00E30A0E /* LineDetailViewController.m in Sources */,
 				D08ED737179A138A00CF6B9C /* DLocationManager.m in Sources */,
 				D08ED73B179A209B00CF6B9C /* InitialViewController.m in Sources */,
 				D08ED73E179A221700CF6B9C /* StationViewController.m in Sources */,
@@ -409,6 +386,7 @@
 				D082579C179B4CE500D2A55A /* RoutesViewController.m in Sources */,
 				D04DC788179B6F950009DA91 /* RouteCell.m in Sources */,
 				D04DC78B179B70E10009DA91 /* UIColor+AWAdditions.m in Sources */,
+				D04DC78E179B7F600009DA91 /* RouteTimesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,19 +32,35 @@
     
     self.textLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome to %@ Station", nil), [self.stop  stopName]];
     
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [self.navigationItem setBackBarButtonItem:backButton];
+    
     [self fetchRoutesNearby];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"pushRoutesViewController"]) {
         RoutesViewController *vc = segue.destinationViewController;
-        
-        
         NSSortDescriptor *sorter = [NSSortDescriptor sortDescriptorWithKey:@"route_id" ascending:YES];
         NSSortDescriptor *directionSorter = [NSSortDescriptor sortDescriptorWithKey:@"direction_id" ascending:NO];
         [self.routesForStation sortUsingDescriptors:@[sorter, directionSorter]];
         [vc setRoutes:[NSArray arrayWithArray:self.routesForStation]];
+        [vc setStop:self.stop];
+        
+        NSIndexPath *index = [self.tableView indexPathForSelectedRow];
+        if (index.row == 0) {
+            [vc setRouteInfoType:RouteInfoTypeTimes];
+        } else {
+            [vc setRouteInfoType:RouteInfoTypeServiceChanges];
+        }
     }
 }
 
@@ -141,7 +157,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0 || indexPath.row == 1) {
         if (self.fetchQueue != 0) {
             [SVProgressHUD showWithStatus:@"Loading..." maskType:SVProgressHUDMaskTypeGradient];
             [self startRetryTimer];
