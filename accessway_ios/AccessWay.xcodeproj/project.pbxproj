@@ -268,12 +268,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A16EC8173571B400942478 /* Build configuration list for PBXNativeTarget "AccessWay" */;
 			buildPhases = (
+				D0D85810179B8C48007E8AC5 /* Run Script */,
 				AC03FDCB10734A439CA16CF4 /* Check Pods Manifest.lock */,
 				D0A16E9E173571B400942478 /* Sources */,
 				D0A16E9F173571B400942478 /* Frameworks */,
 				D0A16EA0173571B400942478 /* Resources */,
 				A923B03F448E4D7098C54E8D /* Copy Pods Resources */,
-				D0D85810179B8C48007E8AC5 /* Run Script */,
 			);
 			buildRules = (
 			);
