@@ -10,7 +10,8 @@
 		87AFCE8930BD42919A41844E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D626AFF257D942A08142777E /* libPods.a */; };
 		D03421D91736089300D5230E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D03421D81736089300D5230E /* icon@2x.png */; };
 		D03421DB1736089500D5230E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D03421DA1736089500D5230E /* icon.png */; };
-		D0627D541735FC4800184895 /* RouteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0627D531735FC4800184895 /* RouteCell.m */; };
+		D04DC788179B6F950009DA91 /* RouteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D04DC787179B6F950009DA91 /* RouteCell.m */; };
+		D04DC78B179B70E10009DA91 /* UIColor+AWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D04DC78A179B70E10009DA91 /* UIColor+AWAdditions.m */; };
 		D0627D5A173600B400184895 /* disclosure_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0627D58173600B400184895 /* disclosure_arrow@2x.png */; };
 		D0627D5B173600B400184895 /* disclosure_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D0627D59173600B400184895 /* disclosure_arrow.png */; };
 		D0627D5D1736052D00184895 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0627D5C1736052D00184895 /* HeaderView.xib */; };
@@ -36,7 +37,6 @@
 		D0A16ECE1735770800942478 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A16ECD1735770800942478 /* CoreLocation.framework */; };
 		D0B7FD1F1735CF400096DED6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B7FD1E1735CF400096DED6 /* DetailViewController.m */; };
 		D0F7C9E51736A6DC00E30A0E /* LineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */; };
-		D0F7C9E81736C40100E30A0E /* CompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C9E71736C40100E30A0E /* CompassViewController.m */; };
 		D0F7C9EA1736D18600E30A0E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F7C9E91736D18600E30A0E /* AudioToolbox.framework */; };
 		D0FD16361736849300775130 /* elevator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD16341736849300775130 /* elevator@2x.png */; };
 		D0FD16371736849300775130 /* exit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD16351736849300775130 /* exit@2x.png */; };
@@ -56,8 +56,10 @@
 		6EEDE5B3BE8249B88EB7B585 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		D03421D81736089300D5230E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
 		D03421DA1736089500D5230E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
-		D0627D521735FC4800184895 /* RouteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteCell.h; sourceTree = "<group>"; };
-		D0627D531735FC4800184895 /* RouteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteCell.m; sourceTree = "<group>"; };
+		D04DC786179B6F950009DA91 /* RouteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteCell.h; sourceTree = "<group>"; };
+		D04DC787179B6F950009DA91 /* RouteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteCell.m; sourceTree = "<group>"; };
+		D04DC789179B70E10009DA91 /* UIColor+AWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AWAdditions.h"; sourceTree = "<group>"; };
+		D04DC78A179B70E10009DA91 /* UIColor+AWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AWAdditions.m"; sourceTree = "<group>"; };
 		D0627D58173600B400184895 /* disclosure_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure_arrow@2x.png"; sourceTree = "<group>"; };
 		D0627D59173600B400184895 /* disclosure_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure_arrow.png; sourceTree = "<group>"; };
 		D0627D5C1736052D00184895 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -97,8 +99,6 @@
 		D0B7FD1E1735CF400096DED6 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		D0F7C9E31736A6DC00E30A0E /* LineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDetailViewController.h; sourceTree = "<group>"; };
 		D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDetailViewController.m; sourceTree = "<group>"; };
-		D0F7C9E61736C40000E30A0E /* CompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompassViewController.h; sourceTree = "<group>"; };
-		D0F7C9E71736C40100E30A0E /* CompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompassViewController.m; sourceTree = "<group>"; };
 		D0F7C9E91736D18600E30A0E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D0FD16341736849300775130 /* elevator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "elevator@2x.png"; sourceTree = "<group>"; };
 		D0FD16351736849300775130 /* exit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exit@2x.png"; sourceTree = "<group>"; };
@@ -166,6 +166,8 @@
 		D08ED734179A12BF00CF6B9C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D04DC786179B6F950009DA91 /* RouteCell.h */,
+				D04DC787179B6F950009DA91 /* RouteCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +179,8 @@
 				D0825795179B3F7600D2A55A /* NSDictionary+Stop.m */,
 				D0825797179B461600D2A55A /* NSDictionary+Route.h */,
 				D0825798179B461600D2A55A /* NSDictionary+Route.m */,
+				D04DC789179B70E10009DA91 /* UIColor+AWAdditions.h */,
+				D04DC78A179B70E10009DA91 /* UIColor+AWAdditions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -229,10 +233,6 @@
 				D0B7FD1E1735CF400096DED6 /* DetailViewController.m */,
 				D0F7C9E31736A6DC00E30A0E /* LineDetailViewController.h */,
 				D0F7C9E41736A6DC00E30A0E /* LineDetailViewController.m */,
-				D0F7C9E61736C40000E30A0E /* CompassViewController.h */,
-				D0F7C9E71736C40100E30A0E /* CompassViewController.m */,
-				D0627D521735FC4800184895 /* RouteCell.h */,
-				D0627D531735FC4800184895 /* RouteCell.m */,
 				D0627D5C1736052D00184895 /* HeaderView.xib */,
 				D0627D5E173605F000184895 /* HeaderView.h */,
 				D0627D5F173605F000184895 /* HeaderView.m */,
@@ -399,16 +399,16 @@
 				D0A16EB6173571B400942478 /* AppDelegate.m in Sources */,
 				D0A16EC5173571B400942478 /* ViewController.m in Sources */,
 				D0B7FD1F1735CF400096DED6 /* DetailViewController.m in Sources */,
-				D0627D541735FC4800184895 /* RouteCell.m in Sources */,
 				D0627D60173605F100184895 /* HeaderView.m in Sources */,
 				D0F7C9E51736A6DC00E30A0E /* LineDetailViewController.m in Sources */,
-				D0F7C9E81736C40100E30A0E /* CompassViewController.m in Sources */,
 				D08ED737179A138A00CF6B9C /* DLocationManager.m in Sources */,
 				D08ED73B179A209B00CF6B9C /* InitialViewController.m in Sources */,
 				D08ED73E179A221700CF6B9C /* StationViewController.m in Sources */,
 				D0825796179B3F7600D2A55A /* NSDictionary+Stop.m in Sources */,
 				D0825799179B461700D2A55A /* NSDictionary+Route.m in Sources */,
 				D082579C179B4CE500D2A55A /* RoutesViewController.m in Sources */,
+				D04DC788179B6F950009DA91 /* RouteCell.m in Sources */,
+				D04DC78B179B70E10009DA91 /* UIColor+AWAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

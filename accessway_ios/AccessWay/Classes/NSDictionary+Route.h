@@ -12,4 +12,10 @@
 
 - (NSString *)routeId;
 
+- (NSNumber *)direction_id;
+
+- (NSString *)routeColor;
+
+- (NSString *)routeShortName;
+
 @end

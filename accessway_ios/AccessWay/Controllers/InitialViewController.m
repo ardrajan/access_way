@@ -57,7 +57,7 @@
         CLLocation *location = [locations lastObject];
         [self findStopsNearbyWithLatitude:[NSString stringWithFormat:@"%0.7f", location.coordinate.latitude] longitude:[NSString stringWithFormat:@"%0.7f", location.coordinate.longitude]];
     } failure:^(CLLocationManager *manager, NSError *error) {
-        [self setToConnectionUnsuccessful];
+        [self setToConnectionUnsuccessfulWithNoNearbyStops:NO];
     }];
 }
 
@@ -70,7 +70,7 @@
         self.stopsNearby = responseData;
         [self openNearestStop];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        [self setToConnectionUnsuccessful];
+        [self setToConnectionUnsuccessfulWithNoNearbyStops:NO];
     }];
     [operation start];
 }
@@ -80,14 +80,14 @@
     for (NSDictionary *stop in self.stopsNearby) {
         CLLocation *poiLoc = [[CLLocation alloc] initWithLatitude:[[stop objectForKey:@"stop_lat"] doubleValue] longitude:[[stop objectForKey:@"stop_lon"] doubleValue]];
         CLLocationDistance currentDistance = [[DLocationManager sharedManager].location distanceFromLocation:poiLoc];
-        DLog(@"%f", currentDistance);
-        if (currentDistance < 500.0) {
+
+        if (currentDistance < 500) {
             [self performSegueWithIdentifier:@"presentStationViewController" sender:stop];
             return;
         }
     }
     
-    [self setToConnectionUnsuccessful];
+    [self setToConnectionUnsuccessfulWithNoNearbyStops:YES];
 }
 
 #pragma mark - IB Actions
@@ -133,13 +133,15 @@
     }];
 }
 
-- (void)setToConnectionUnsuccessful
+- (void)setToConnectionUnsuccessfulWithNoNearbyStops:(BOOL)noNearby
 {
     [UIView animateWithDuration:0.3f animations:^{
         self.detailTextLabel.alpha = 0.0f;
         self.activityIndicator.alpha = 0.0f;
     } completion:^(BOOL finished) {
-        [self.detailTextLabel setText:NSLocalizedString(@"Whoops, it looks like we were not able to connect.\n\nNo worries, check and make sure you are connected to the MTA wifi from within your Settings.", nil)];
+        NSString *message = noNearby == YES ? NSLocalizedString(@"Whoops, it looks like you are not at a station.", nil) :
+        NSLocalizedString(@"Whoops, it looks like we were not able to connect.\n\nNo worries, check and make sure you are connected to the MTA wifi from within your Settings.", nil);
+        [self.detailTextLabel setText:message];
         self.detailTextLabel.numberOfLines = 6;
         [self.detailTextLabel setTextAlignment:NSTextAlignmentLeft];
         [self resizeLabel:self.detailTextLabel];

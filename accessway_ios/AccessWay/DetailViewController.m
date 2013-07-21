@@ -10,7 +10,6 @@
 #import "RouteCell.h"
 #import "HeaderView.h"
 #import "LineDetailViewController.h"
-#import "CompassViewController.h"
 
 @interface DetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -69,12 +68,6 @@
         LineDetailViewController *vc = segue.destinationViewController;
         [vc setRoute:route];
     } else {
-        CompassViewController *vc = segue.destinationViewController;
-        if (index.row == 0) {
-            [vc setTitle:@"Elevators"];
-        } else {
-            [vc setTitle:@"Exits"];
-        }
     }
 }
 
@@ -109,7 +102,6 @@
         NSString *key = [self.routes objectAtIndex:indexPath.row];
         NSDictionary *route = [self.routeData objectForKey:key];
         NSString *color = [route objectForKey:@"route_color"];
-        cell.color = [self colorFromHexString:color];
         [cell.nameLabel setText:[route objectForKey:@"route_long_name"]];
         [cell.routeLabel setText:[route objectForKey:@"route_short_name"]];
         cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"disclosure_arrow"]];
@@ -154,15 +146,6 @@
     } else {
         [self performSegueWithIdentifier:@"pushCompassView" sender:self];
     }
-}
-
-#pragma mark - Color Helper
-
-- (UIColor *)colorFromHexString:(NSString *)hexString {
-    unsigned rgbValue = 0;
-    NSScanner *scanner = [NSScanner scannerWithString:hexString];
-    [scanner scanHexInt:&rgbValue];
-    return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:1.0];
 }
 
 @end
