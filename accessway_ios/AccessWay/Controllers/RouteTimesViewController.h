@@ -10,8 +10,8 @@
 
 @interface RouteTimesViewController : UIViewController
 
-@property (nonatomic, strong) NSDictionary *stop;
-@property (nonatomic, strong) NSDictionary *route;
+@property (strong, nonatomic) NSDictionary *stop;
+@property (strong, nonatomic) NSDictionary *route;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

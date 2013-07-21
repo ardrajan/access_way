@@ -82,7 +82,7 @@
         CLLocation *poiLoc = [[CLLocation alloc] initWithLatitude:[[stop stopLat] doubleValue] longitude:[[stop stopLon] doubleValue]];
         CLLocationDistance currentDistance = [[DLocationManager sharedManager].location distanceFromLocation:poiLoc];
 
-        if (currentDistance < 500 && [stop stopId].length == 4) {
+        if (currentDistance < 100) {
             [self performSegueWithIdentifier:@"presentStationViewController" sender:stop];
             return;
         }
